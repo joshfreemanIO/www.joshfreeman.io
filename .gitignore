@@ -6,3 +6,5 @@ public
 .cache/
 yarn.lock
 yarn-error.log
+.env.firebase
+codeship.aes

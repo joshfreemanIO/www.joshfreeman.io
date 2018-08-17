@@ -1,0 +1,12 @@
+- name: Install Dependencies
+  service: gatsby
+  command: npm install
+
+- name: Build Site
+  service: gatsby
+  command: gatsby build
+
+- name: Push to Google Firebase
+  service: firebase
+  command: bash -c "firebase deploy --token ${FIREBASE_TOKEN}"
+

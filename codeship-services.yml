@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  gatsby:
+    build:
+      image: joshfreeman.io/gatsby
+      dockerfile: Dockerfile.gatsby
+    cached: true
+    working_dir: /opt
+    volumes:
+      - ./:/opt
+
+  firebase:
+    build:
+      image: joshfreeman.io/firebase
+      dockerfile: Dockerfile.firebase
+    cached: true
+    working_dir: /opt
+    volumes:
+      - ./:/opt
+    encrypted_env_file: ./.env.firebase.encrypted
