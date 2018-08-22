@@ -27,5 +27,19 @@
   &.github {
     background-image: url(../icons/github.svg);
   }
+
+  &.linkedin {
+    background-image: url(../icons/linkedin.svg);
+  }
+}
+
+.social-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .social-icon {
+    margin: 0 $scale6;
+  }
 }
 

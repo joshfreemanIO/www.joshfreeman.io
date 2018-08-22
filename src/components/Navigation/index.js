@@ -20,11 +20,11 @@ const Navigation = ({store}) => {
         </div>
 
         <div className="nav-group">
-          <Link className="nav-link" to="/">Products</Link>
+          <Link className="nav-link" to="/about">About</Link>
         </div>
 
         <div className="nav-group">
-          <Link className="nav-link" to="/social-media">Social Media</Link>
+          <Link className="nav-link" to="/contact">Contact</Link>
         </div>
       </div>
     </nav>

@@ -1,8 +1,9 @@
 .site-navigation {
   align-items: center;
-  border-right: 2px solid $gray;
+  border-right: 1px solid $gray;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   height: 100%;
   padding: 18px 24px;
   width: 325px;
