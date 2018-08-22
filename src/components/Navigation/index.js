@@ -11,7 +11,11 @@ const Navigation = ({store}) => {
 
       <div className="input-group nav-group">
         <label htmlFor="subscribe">Subscribe</label>
-        <input type="text" id="subscribe" placeholder="me@domain.com"/>
+
+        <div className="subscribe-wrapper">
+          <input type="text" id="subscribe" className="subscribe-input" placeholder="me@domain.com"/>
+          <button className="subscribe-button"></button>
+        </div>
       </div>
 
       <div className="navigation-links">
