@@ -6,5 +6,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/blog`,
+        name: "markdown-pages",
+      },
+    },
+    'gatsby-transformer-remark'
   ],
 }
