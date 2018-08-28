@@ -10,6 +10,7 @@
 
   &:hover {
     filter: none;
+    cursor: pointer;
   }
 
   &.facebook {
@@ -26,6 +27,11 @@
 
   &.github {
     background-image: url(../icons/github.svg);
+
+    &:hover {
+      filter: invert(100%);
+      background-color: black;
+    }
   }
 
   &.linkedin {
@@ -42,4 +48,3 @@
     margin: 0 $scale6;
   }
 }
-
