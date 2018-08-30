@@ -1,6 +1,6 @@
 import React from 'react'
 import { observer } from 'mobx-react'
-import { types, getSnapshot } from 'mobx-state-tree'
+import { types } from 'mobx-state-tree'
 
 const ContactForm = types
   .model({
@@ -57,7 +57,7 @@ const Form = () => (
 
     <div className="input-group">
       <label htmlFor="input-comments">Question or Comments</label>
-      <textarea name="" id="input-comments" onChange={form.update} name="comments" value={form.comments} ></textarea>
+      <textarea id="input-comments" onChange={form.update} name="comments" value={form.comments} ></textarea>
     </div>
 
     { form.submitted === false &&
