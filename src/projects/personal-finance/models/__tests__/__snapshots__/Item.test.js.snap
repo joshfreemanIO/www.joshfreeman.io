@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item instantiation 1`] = `
+Object {
+  "category": "",
+  "frequency": "",
+  "name": "",
+  "taxableIncomeReducing": false,
+  "value": 0,
+}
+`;
