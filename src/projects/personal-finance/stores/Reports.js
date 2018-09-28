@@ -5,28 +5,32 @@ const Reports = types
   .model()
   .views(self => ({
     get income() {
-      return getRoot(self).income
+      return total(getRoot(self).income)
     },
     get expenses() {
-      return getRoot(self).expenses
+      return total(getRoot(self).expenses)
     },
     get savings() {
-      return getRoot(self).savings
+      return total(getRoot(self).savings)
     },
     get taxableIncomeReducingExpenses() {
-      return self
+      const expenses = getRoot(self)
         .expenses
         .filter(item => item.taxableIncomeReducing)
+
+      return total(expenses)
     },
     get taxableIncomeReducingSavings() {
-      return self
+      const savings = getRoot(self)
         .savings
         .filter(item => item.taxableIncomeReducing)
+
+      return total(savings)
     },
     get AdjustedGrossIncome() {
-      return total(self.income)
-        - total(self.taxableIncomeReducingExpenses)
-        // - self.taxableIncomeReducingSavings
+      return self.income
+        - self.taxableIncomeReducingExpenses
+        - self.taxableIncomeReducingSavings
     }
   }))
 

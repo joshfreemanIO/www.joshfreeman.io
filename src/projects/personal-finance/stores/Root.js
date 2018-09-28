@@ -6,7 +6,9 @@ const Root = types
   .model({
     income: types.optional(types.array(Item), []),
     expenses: types.optional(types.array(Item), []),
-    reports: types.optional(Reports, {})
+    savings: types.optional(types.array(Item), []),
+    reports: types.optional(Reports, {}),
+    // taxes: types.optional(Taxes, {})
   })
 
 export default Root
