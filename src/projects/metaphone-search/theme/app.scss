@@ -1,0 +1,31 @@
+.scene {
+  padding: 24px
+}
+
+.metaphone-scene {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.metaphone-search {
+  flex-grow: 0;
+}
+
+.application-list {
+  margin-top: 24px;
+  border: 1px solid gray;
+
+  &.empty {
+    display: none;
+  }
+}
+
+.application-listing {
+  padding: 8px 24px;
+}
+
+.application-listing:not(:last-child) {
+  padding: 8px 24px;
+  border-bottom: 1px solid gray
+}
