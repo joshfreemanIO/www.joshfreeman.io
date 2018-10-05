@@ -13,7 +13,7 @@ const Page = () => (
 
     <h1>Keep Conversation Alive</h1>
 
-    <p>I'm grateful  you'd like to get in touch with me!</p>
+    <p>I'm glad you'd like to get in touch with me!</p>
 
     <p>If you'd like to ask a direct question, please use the contact form below. If you're hip to social media, then check out the icons below.</p>
 
