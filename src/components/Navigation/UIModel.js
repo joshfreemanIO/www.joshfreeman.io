@@ -7,6 +7,9 @@ const UIStore = types
   .actions(self => ({
     toggle() {
       self.isOpen = !self.isOpen
+    },
+    dismiss() {
+      self.isOpen = false
     }
   }))
 

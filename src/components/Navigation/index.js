@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link  } from 'gatsby'
 import { inject, observer } from 'mobx-react'
 
 const Navigation = ({store}) => {
@@ -20,15 +20,15 @@ const Navigation = ({store}) => {
 
       <div className="navigation-links">
         <div className="nav-group">
-          <Link className="nav-link" to="/">Blog</Link>
+          <Link className="nav-link" to="/blog" onClick={store.UIStore.Navigation.dismiss}>Blog</Link>
         </div>
 
         <div className="nav-group">
-          <Link className="nav-link" to="/about">About</Link>
+          <Link className="nav-link" to="/about" onClick={store.UIStore.Navigation.dismiss}>About</Link>
         </div>
 
         <div className="nav-group">
-          <Link className="nav-link" to="/contact">Contact</Link>
+          <Link className="nav-link" to="/contact" onClick={store.UIStore.Navigation.dismiss}>Contact</Link>
         </div>
       </div>
     </nav>
