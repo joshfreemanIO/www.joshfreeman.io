@@ -9,7 +9,7 @@ const Page = () => (
       <title>About Josh Freeman</title>
     </Helmet>
 
-    <h1 className="center">Howdy, I'm Josh</h1>
+    <h1>Howdy, I'm Josh</h1>
 
     <p>I'm based in San Antonio, Texas with the mission to create good in the world around me. I write React and Elixir with <a href="https://www.grok-interactive.com" target="_blank" rel="noopener noreferrer">Grok Interactive</a> with a dash of business development thrown into the mix.</p>
 
