@@ -9,15 +9,6 @@ const Navigation = ({store}) => {
     <nav className={className}>
       <Link to="" className="site-title">Josh Freeman</Link>
 
-      <div className="input-group nav-group">
-        <label htmlFor="subscribe">Subscribe</label>
-
-        <div className="subscribe-wrapper">
-          <input type="text" id="subscribe" className="subscribe-input" placeholder="me@domain.com"/>
-          <button className="subscribe-button"></button>
-        </div>
-      </div>
-
       <div className="navigation-links">
         <div className="nav-group">
           <Link className="nav-link" to="/blog" onClick={store.UIStore.Navigation.dismiss}>Blog</Link>
@@ -31,7 +22,18 @@ const Navigation = ({store}) => {
           <Link className="nav-link" to="/contact" onClick={store.UIStore.Navigation.dismiss}>Contact</Link>
         </div>
       </div>
+
+      <div className="input-group nav-group">
+        <label htmlFor="subscribe">Subscribe</label>
+
+        <div className="subscribe-wrapper">
+          <input type="text" id="subscribe" className="subscribe-input" placeholder="me@domain.com"/>
+          <button className="subscribe-button"></button>
+        </div>
+      </div>
+
     </nav>
+
   )
 }
 
