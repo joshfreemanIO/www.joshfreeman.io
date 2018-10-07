@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100%;
   padding: 18px 24px;
-  width: 325px;
+  width: 360px;
   overflow: scroll;
   flex-shrink: 0;
 
@@ -28,6 +28,10 @@
   flex-direction: column;
   flex-shrink: 0;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .nav-link {
@@ -50,25 +54,33 @@
 }
 
 .site-title {
-  background: url(../images/joshfreeman.svg) center no-repeat;
   background-size: contain;
-  color: $black;
+  color: $gray;
   flex-shrink: 0;
-  font-size: $scale8;
+  font-size: $scale9;
   font-weight: bold;
   height: 65px;
+  letter-spacing: -3px;
+  line-height: $scale9;
   margin-bottom: 30px;
+  margin-left: 5px;
+  text-align: center;
   text-decoration: none;
-  text-indent: -9001px;
+  text-transform: small-caps;
   width: 100%;
 
   @media screen and (max-width: 450px) {
     background-position: center left;
+    width: calc(100% - 45px);
+  }
+
+  @media screen and (max-width: 460px) {
+    font-size: $scale8;
   }
 }
 
 .navigation-toggle {
-  background-position: center;
+  background-position: 0 34px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(../icons/hamburger.svg);
@@ -89,16 +101,30 @@
   @media screen and (min-width: 769px) {
     display: none;
   }
+
+  @media screen and (max-width: 460px) {
+    background-position: 0 30px;
+  }
 }
 
 .subscribe-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: row ;
 }
 
 .subscribe-input {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
+
+  &:focus, &:focus + .subscribe-button {
+    box-shadow: 0 0 4px 2px rgba(100, 100, 100, 0.5);
+  }
+}
+
+label[for="subscribe"] {
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .subscribe-button {
