@@ -27,7 +27,7 @@ const Navigation = ({store}) => {
         <label htmlFor="subscribe">Subscribe</label>
 
         <div className="subscribe-wrapper">
-          <input type="text" id="subscribe" className="subscribe-input" placeholder="me@domain.com"/>
+          <input type="text" id="subscribe" className="subscribe-input" placeholder="Email"/>
           <button className="subscribe-button">Sign Up</button>
         </div>
       </div>
