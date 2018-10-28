@@ -102,6 +102,8 @@
 }
 
 .navigation-toggle {
+  -webkit-tap-highlight-color: transparent;
+
   .menu-icon {
     opacity: 1;
   }
