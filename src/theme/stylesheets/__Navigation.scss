@@ -8,6 +8,9 @@
   width: 360px;
   overflow: scroll;
   flex-shrink: 0;
+  font-size: $scale7;
+  line-height: $scale7;
+  text-transform: lowercase;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -47,6 +50,7 @@
 
 .nav-group {
   margin-bottom: 30px;
+  display: flex;
 }
 
 .site-footer-about, .site-footer-social {
@@ -57,17 +61,21 @@
   background-size: contain;
   color: $gray;
   flex-shrink: 0;
-  font-size: $scale9;
   font-weight: bold;
-  height: 65px;
-  letter-spacing: -3px;
-  line-height: $scale9;
-  margin-bottom: 30px;
+  display: flex;
+  letter-spacing: -2px;
+  font-size: $scale8;
+  line-height: $scale8;
+  margin-bottom: 60px;
   margin-left: 5px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  text-transform: small-caps;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    height: 64px;
+    line-height: 64px;
+  }
 
   @media screen and (max-width: 450px) {
     background-position: center left;
@@ -75,16 +83,10 @@
   }
 
   @media screen and (max-width: 460px) {
-    font-size: $scale8;
   }
 }
 
 .navigation-toggle {
-  background-position: 0 34px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(../icons/hamburger.svg);
-  background-color: transparent;
   border: none;
   height: 101px;
   outline: none;
@@ -92,19 +94,51 @@
   right: 15px;
   top: 0;
   width: 30px;
-  transition: 0.1s ease;
-
-  &.active {
-    background-image: url(../icons/x.svg);
-  }
+  padding: 0;
 
   @media screen and (min-width: 769px) {
     display: none;
   }
+}
 
-  @media screen and (max-width: 460px) {
-    background-position: 0 30px;
+.navigation-toggle {
+  .menu-icon {
+    opacity: 1;
   }
+  .close-icon {
+    opacity: 0;
+  }
+}
+
+.navigation-toggle.active {
+  .menu-icon {
+    opacity: 0;
+  }
+  .close-icon {
+    opacity: 1;
+  }
+}
+
+.menu-icon, .close-icon {
+  display: flex;
+  flex-grow: 1;
+  background-position: 0 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  transition: 0.1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-icon {
+  background-image: url(../icons/hamburger.svg);
+}
+
+.close-icon {
+  background-image: url(../icons/x.svg);
 }
 
 .subscribe-wrapper {

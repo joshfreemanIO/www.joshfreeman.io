@@ -7,7 +7,7 @@ const Navigation = ({store}) => {
 
   return (
     <nav className={className}>
-      <Link to="" className="site-title">Josh Freeman</Link>
+      <Link to="" className="site-title">joshfreeman.io</Link>
 
       <div className="navigation-links">
         <div className="nav-group">
