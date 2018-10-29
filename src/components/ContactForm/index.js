@@ -82,7 +82,6 @@ const FormElement = css`
   padding: 6px 12px;
   outline: none;
   line-height: 1.25;
-
 `
 
 const Input = styled.input`

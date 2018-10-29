@@ -1,6 +1,6 @@
 import React from 'react'
 import Sound from 'react-sound'
-import Logoff from '../../theme/sounds/windows-xp-shutdown.mp3'
+import Logoff from './sounds/windows-xp-shutdown.mp3'
 import SocialIcon from '../SocialIcon';
 /* global soundManager:false */
 

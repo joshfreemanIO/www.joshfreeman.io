@@ -9,7 +9,7 @@ import store from '../../stores'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../../theme'
 
-import '../../theme/stylesheets/app.scss'
+import './stylesheets/app.scss'
 
 const MainWrapper = styled.div`
   display: flex;

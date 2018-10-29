@@ -2,7 +2,6 @@ export default {
   colors: {
     black: '#222',
     gray: '#335',
-    blue: 'red'
   },
   scales: {
     scale1: '5px',

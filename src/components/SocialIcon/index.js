@@ -46,7 +46,7 @@ const IconLink = styled.a`
       background-color: black;
     }
   }
-  `
+`
 
 const SocialIcon = ({platform, children, ...props}) => (
   <IconLink className={platform} target="_blank" rel="noopener noreferrer" {...props}>{children}</IconLink>
