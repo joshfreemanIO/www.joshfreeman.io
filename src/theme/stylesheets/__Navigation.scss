@@ -79,14 +79,6 @@
     height: 64px;
     line-height: 64px;
   }
-
-  @media screen and (max-width: 450px) {
-    background-position: center left;
-    width: calc(100% - 45px);
-  }
-
-  @media screen and (max-width: 460px) {
-  }
 }
 
 .navigation-toggle {
