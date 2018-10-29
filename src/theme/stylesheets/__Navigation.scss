@@ -1,6 +1,5 @@
 .site-navigation {
   align-items: center;
-  box-shadow: 2px 0 10px 1px rgb(200, 200, 200);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -31,8 +30,9 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  flex-grow: 1;
   width: 100%;
+  flex-grow: 1;
+  text-align: right;
 
   @media screen and (max-width: 768px) {
     text-align: center;
@@ -40,7 +40,6 @@
 }
 
 .nav-link {
-  font-weight: bold;
   color: $gray;
   text-decoration: none;
 }
@@ -53,6 +52,8 @@
 .nav-group {
   margin-bottom: 30px;
   display: flex;
+  position: relative;
+  justify-content: flex-end;
 }
 
 .site-footer-about, .site-footer-social {
@@ -63,11 +64,10 @@
   background-size: contain;
   color: $gray;
   flex-shrink: 0;
-  flex-grow: 0;
   font-weight: bold;
   display: flex;
   letter-spacing: -2px;
-  font-size: $scale8;
+  font-size: 45px;
   line-height: $scale8;
   margin-bottom: 60px;
   margin-left: 5px;
@@ -136,41 +136,6 @@
 
 .close-icon {
   background-image: url(../icons/x.svg);
-}
-
-.subscribe-wrapper {
-  display: flex;
-  flex-direction: row ;
-}
-
-.subscribe-input {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  border: 1px solid $gray;
-
-  &:focus, &:focus + .subscribe-button {
-    box-shadow: 0 0 4px 2px rgba(100, 100, 100, 0.5);
-  }
-}
-
-label[for="subscribe"] {
-  @media screen and (max-width: 768px) {
-    text-align: center;
-  }
-}
-
-.subscribe-button {
-  flex-shrink: 0;
-  width: 110px;
-  border: none;
-  border: 1px solid $gray;
-  border-left: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  font-weight: bold;
-  color: white;
-  background-color: $gray;
-  font-size: 20px;
 }
 
 #___gatsby > div[role=group] {

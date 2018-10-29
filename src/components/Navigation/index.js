@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link  } from 'gatsby'
 import { inject, observer } from 'mobx-react'
+import Subscribe from './Subscribe'
 
 const Navigation = ({store}) => {
   const className = store.UIStore.Navigation.isOpen ? 'site-navigation active' : 'site-navigation'
@@ -23,17 +24,9 @@ const Navigation = ({store}) => {
         </div>
       </div>
 
-      <div className="input-group nav-group">
-        <label htmlFor="subscribe">Subscribe</label>
-
-        <div className="subscribe-wrapper">
-          <input type="text" id="subscribe" className="subscribe-input" placeholder="Email"/>
-          <button className="subscribe-button">Sign Up</button>
-        </div>
-      </div>
+      <Subscribe />
 
     </nav>
-
   )
 }
 
