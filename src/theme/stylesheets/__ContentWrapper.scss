@@ -14,10 +14,17 @@
   @media screen and (max-width: 720px) {
     padding: 24px;
   }
+}
 
-  @media screen and (max-width: 768px) {
-    h1 {
-      text-align: center;
-    }
+.blog-title {
+  padding-bottom: 36px;
+  border-bottom: 1px solid $gray;
+}
+
+.article-header {
+  h1 {
+    margin-bottom: 0;
   }
+
+  margin-bottom: 24px;
 }
