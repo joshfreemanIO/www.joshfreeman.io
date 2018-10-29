@@ -1,6 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 import { types } from 'mobx-state-tree'
+import styled, {css} from 'styled-components'
 
 const ContactForm = types
   .model({
@@ -41,29 +42,96 @@ const ContactForm = types
 
 const form = ContactForm.create()
 
+const InputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+
+  label {
+    font-weight: bold;
+    color: ${props => props.theme.colors.gray};
+    text-decoration: none;
+  }
+
+  &.half {
+    max-width: 47.5%;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+`
+
+const InputRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const FormElement = css`
+  border: 1px solid ${props => props.theme.colors.black};
+  flex-grow: 1;
+  width: 100%;
+  font-size: ${props => props.theme.scales.scale6};
+  padding: 6px 12px;
+  outline: none;
+  line-height: 1.25;
+
+`
+
+const Input = styled.input`
+  ${FormElement};
+  height: 42px;
+  padding: 6px;
+  width: 100%;
+`
+
+const TextArea = styled.textarea`
+  ${FormElement};
+  height: 84px;
+`
+
+const Button = styled.button`
+  ${FormElement};
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+const Label = styled.label`
+  cursor: pointer;
+  margin-bottom: 15px;
+`
+
 const Form = () => (
   <>
-    <div className="input-row">
-      <div className="input-group half">
-        <label htmlFor="input-name">Name</label>
-        <input id="input-name" type="text" className="subscribe-input" name="name" placeholder="Your name" onChange={form.update} value={form.name} />
-      </div>
+    <InputRow>
+      <InputGroup className="half">
+        <Label htmlFor="input-name">Name</Label>
+        <Input id="input-name" type="text" name="name" placeholder="Your name" onChange={form.update} value={form.name} />
+      </InputGroup>
 
-      <div className="input-group half">
-        <label htmlFor="input-email">Email</label>
-        <input id="input-email" type="text" className="subscribe-input" name="email" placeholder="your@email.com" onChange={form.update} value={form.email} />
-      </div>
-    </div>
+      <InputGroup className="half">
+        <Label htmlFor="input-email">Email</Label>
+        <Input id="input-email" type="text" className="subscribe-input" name="email" placeholder="your@email.com" onChange={form.update} value={form.email} />
+      </InputGroup>
+    </InputRow>
 
-    <div className="input-group">
-      <label htmlFor="input-comments">Question or Comments</label>
-      <textarea id="input-comments" onChange={form.update} name="comments" value={form.comments} ></textarea>
-    </div>
+    <InputGroup>
+      <Label htmlFor="input-comments">Question or Comments</Label>
+      <TextArea id="input-comments" onChange={form.update} name="comments" value={form.comments} ></TextArea>
+    </InputGroup>
 
     { form.submitted === false &&
-      <div className="input-group">
-        <button onClick={form.submit}>Submit</button>
-      </div>
+      <InputGroup>
+        <Button onClick={form.submit}>Submit</Button>
+      </InputGroup>
     }
 
    { form.submitted &&

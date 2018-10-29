@@ -6,8 +6,38 @@ import Navigation from '../Navigation'
 import NavigationButton from '../Navigation/Button'
 import { Provider } from 'mobx-react'
 import store from '../../stores'
+import styled, { ThemeProvider } from 'styled-components'
+import theme from '../../theme'
 
 import '../../theme/stylesheets/app.scss'
+
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const ContentWrapper = styled.div`
+  flex-grow: 1;
+  overflow: scroll;
+  padding: 30px 150px;
+
+  @media screen and (max-width: 1080px) {
+    padding: 30px 90px;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding: 30px 60px;
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 24px;
+  }
+`
 
 const Layout = ({ children, data }) => (
   <StaticQuery
@@ -25,14 +55,16 @@ const Layout = ({ children, data }) => (
         <Head data={data} />
 
         <Provider store={store}>
-          <div className="main-wrapper" >
-            <Navigation />
-            <NavigationButton />
+          <ThemeProvider theme={theme}>
+            <MainWrapper>
+              <Navigation />
+              <NavigationButton />
 
-            <div className="content-wrapper">
-              {children}
-            </div>
-          </div>
+              <ContentWrapper>
+                {children}
+              </ContentWrapper>
+            </MainWrapper>
+          </ThemeProvider>
         </Provider>
       </>
     )}

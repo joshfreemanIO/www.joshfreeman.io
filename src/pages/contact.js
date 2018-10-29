@@ -4,6 +4,18 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
 import MusicalLinkAway from '../components/MusicalLinkAway'
+import SocialIcon from '../components/SocialIcon'
+import styled from 'styled-components'
+
+const SocialGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .social-icon {
+    margin: 0 $scale6;
+  }
+`
 
 const Page = () => (
   <Layout>
@@ -17,12 +29,12 @@ const Page = () => (
 
     <ContactForm />
 
-    <div className="social-group">
-      <a className="social-icon linkedin" href="https://www.linkedin.com/in/joshfreemanio/" target="_blank" rel="noopener noreferrer">LinkedIn: (@joshfreemanIO)</a>
-      <a className="social-icon instagram" href="https://instagram.com/joshfreemanIO" target="_blank" rel="noopener noreferrer">Instagram: (@joshfreemanIO)</a>
-      <a className="social-icon twitter" href="https://twitter.com/joshfreemanIO" target="_blank" rel="noopener noreferrer">Twitter: (@joshfreemanIO)</a>
-      <MusicalLinkAway className="social-icon github" href="https://github.com/joshfreemanIO" target="_blank" rel="noopener noreferrer">Github</MusicalLinkAway>
-    </div>
+    <SocialGroup>
+      <SocialIcon platform="linkedin" href="https://www.linkedin.com/in/joshfreemanio/">LinkedIn: (@joshfreemanIO)</SocialIcon>
+      <SocialIcon platform="instagram" href="https://instagram.com/joshfreemanIO">Instagram: (@joshfreemanIO)</SocialIcon>
+      <SocialIcon platform="twitter" href="https://twitter.com/joshfreemanIO">Twitter: (@joshfreemanIO)</SocialIcon>
+      <MusicalLinkAway className="social-icon github" href="https://github.com/joshfreemanIO">Github</MusicalLinkAway>
+    </SocialGroup>
 
   </Layout>
 )
