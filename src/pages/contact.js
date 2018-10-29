@@ -11,9 +11,7 @@ const Page = () => (
       <title>Contact Josh Freeman</title>
     </Helmet>
 
-    <h1>Keep Conversation Alive</h1>
-
-    <p>I'm glad you'd like to get in touch with me!</p>
+    <h1>Let's talk</h1>
 
     <p>If you'd like to ask a direct question, please use the contact form below. If you're hip to social media, then check out the icons below.</p>
 
