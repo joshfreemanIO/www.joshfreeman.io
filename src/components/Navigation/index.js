@@ -80,10 +80,14 @@ const NavLink = styled(Link)`
   text-decoration: none;
 `
 
+const Dot = styled.span`
+  color: red;
+`
+
 const Navigation = ({store}) => {
   return (
     <SiteNavigation className={store.UIStore.Navigation.isOpen ? 'active' : ''}>
-      <Title to="/">joshfreeman.io</Title>
+      <Title to="/">joshfreeman<Dot>.</Dot>io</Title>
 
       <NavigationLinks>
         <NavGroup className="nav-group">
