@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
 import MusicalLinkAway from '../components/MusicalLinkAway'
 import SocialIcon from '../components/SocialIcon'
 import styled from 'styled-components'
+import PageHeader from '../components/PageHeader'
 
 const SocialGroup = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ const Page = () => (
       <title>Contact Josh Freeman</title>
     </Helmet>
 
-    <h1>Let's talk</h1>
+    <PageHeader>Let's talk</PageHeader>
 
     <p>If you'd like to ask a direct question, please use the contact form below. If you're hip to social media, then check out the icons below.</p>
 

@@ -13,7 +13,7 @@ const Title = styled(Link)`
   display: flex;
   letter-spacing: -2px;
   font-size: 45px;
-  line-height: ${props => props.theme.scales.scale8};
+  line-height: 61px;
   margin-bottom: 60px;
   margin-left: 5px;
   text-align: left;

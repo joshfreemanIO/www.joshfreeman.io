@@ -1,12 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Article from '../components/Article'
-import styled from 'styled-components'
-
-const BlogTitle = styled.h1`
-  padding-bottom: 36px;
-  border-bottom: 1px solid ${props => props.theme.colors.gray};
-`
+import PageHeader from '../components/PageHeader'
 
 const Page = ({
   data: {
@@ -14,7 +9,7 @@ const Page = ({
   },
 }) => (
   <Layout>
-    <BlogTitle>Latest Articles</BlogTitle>
+    <PageHeader>Latest Articles</PageHeader>
 
     {edges.map(({node}) => {
       const { frontmatter, html } = node

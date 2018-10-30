@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
 import Layout from '../components/Layout'
+import PageHeader from '../components/PageHeader'
 
 const Page = () => (
   <Layout>
@@ -9,7 +9,7 @@ const Page = () => (
       <title>About Josh Freeman</title>
     </Helmet>
 
-    <h1>Hi, I'm Josh</h1>
+    <PageHeader>Hi, I'm Josh</PageHeader>
 
     <p>I'm based in San Antonio, Texas with the mission to create good in the world around me. I write React and Elixir with <a href="https://www.grok-interactive.com" target="_blank" rel="noopener noreferrer">Grok Interactive</a> with a dash of business development thrown into the mix.</p>
 
