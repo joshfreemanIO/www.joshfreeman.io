@@ -1,7 +1,7 @@
 export default {
   colors: {
-    black: '#222',
-    gray: '#335',
+    black: '#000',
+    gray: '#000',
   },
   scales: {
     scale1: '5px',
