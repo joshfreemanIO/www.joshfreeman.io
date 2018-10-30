@@ -8,6 +8,7 @@ const Title = styled(Link)`
   background-size: contain;
   color: ${props => props.theme.colors.gray};
   flex-shrink: 0;
+  flex-grow: 0;
   font-weight: bold;
   display: flex;
   letter-spacing: -2px;
