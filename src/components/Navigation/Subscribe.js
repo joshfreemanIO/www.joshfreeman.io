@@ -10,6 +10,7 @@ const SubscribeWrapper = styled.div`
   display: flex;
   flex-direction: row;
 `
+
 const SubscribeButton = styled.button`
   flex-shrink: 0;
   width: 110px;
@@ -42,18 +43,20 @@ const SubscribeButton = styled.button`
 `
 
 const Input = styled.input`
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  border: 1px solid ${props => props.theme.colors.gray};
+  border: 0;
+  border-bottom: 1px solid ${props => props.theme.colors.gray};
   font-size: ${props => props.theme.scales.scale5};
+  flex-grow: 1;
 
   &:focus, &:focus + .subscribe-button {
-    box-shadow: 0 0 4px 2px rgba(100, 100, 100, 0.5);
+    outline: none;
   }
 `
 
 const SubscribeLink = styled.a`
   align-self: flex-end;
+  justify-self: flex-end;
+  margin-bottom: 28px;
   cursor: pointer;
 `
 
@@ -65,19 +68,49 @@ const Error = styled.p`
   margin: 0;
 `
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+
+  .form {
+    height: 0;
+    opacity: 0;
+    display: none;
+    transition: 0.2s
+  }
+
+  .form.active {
+    height: auto;
+    opacity: 1;
+  }
+`
+
+const Form = styled.div`
+  height: 0;
+  opacity: 0;
+  transition: 0.35s;
+  overflow: hidden;
+
+  &.active {
+    height: 40px;
+    opacity: 1;
+  }
+`
+
 const Subscribe = () => {
   let email;
 
-  if (uimodel.closed) {
-    return <SubscribeLink onClick={uimodel.open}>Subscribe</SubscribeLink>
-  }
-
   return (
+    <Container>
+      <SubscribeLink onMouseEnter={uimodel.open}>Subscribe</SubscribeLink>
+
+        <Form className={uimodel.isOpen ? 'active' : ''} >
       <MailchimpSubscribe url={url} render={({ subscribe, status, message }) => (
-        <div>
-          {status === 'error' && <Error>{message}</Error>}
 
           <SubscribeWrapper>
+          {status === 'error' && <Error>{message}</Error>}
             <Input ref={node => (email = node)} type="text" id="subscribe" name="email" placeholder="Email" />
 
             <SubscribeButton className={status} onClick={() => subscribe({EMAIL: email.value})}>
@@ -88,8 +121,9 @@ const Subscribe = () => {
               }[status] || 'Submit'}
             </SubscribeButton>
           </SubscribeWrapper>
-        </div>
       )} />
+        </Form>
+    </Container>
   )
 }
 
@@ -98,11 +132,11 @@ const uimodel = types
   .props({
     email: '',
     message: '',
-    closed: true
+    isOpen: false
   })
   .actions(self => ({
     open() {
-      self.closed = false
+      self.isOpen = true
     }
   }))
   .create({})
