@@ -23,6 +23,8 @@ const MainWrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   overflow: scroll;
   padding: 30px 150px;

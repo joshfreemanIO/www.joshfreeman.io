@@ -9,7 +9,7 @@ const Page = ({
   },
 }) => (
   <Layout>
-    <PageHeader>Latest Articles</PageHeader>
+    {/* <PageHeader>Latest Articles</PageHeader> */}
 
     {edges.map(({node}) => {
       const { frontmatter, html } = node
