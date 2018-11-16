@@ -16,6 +16,7 @@ const IconLink = styled.a`
   text-indent: -9000px;
   filter: grayscale(1) brightness(0);
   margin: 0 ${props => props.theme.scales.scale6};
+  align-self: flex-end;
 
   &:hover {
     filter: none;

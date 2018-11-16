@@ -10,9 +10,12 @@ import PageHeader from '../components/PageHeader'
 const SocialGroup = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
+  align-self: center;
+  flex-grow: 1;
 
   .social-icon {
+    align-self: flex-end;
     margin: 0 $scale6;
   }
 `
@@ -24,8 +27,6 @@ const Page = () => (
     </Helmet>
 
     <PageHeader>Let's talk</PageHeader>
-
-    <p>If you'd like to ask a direct question, please use the contact form below. If you're hip to social media, then check out the icons below.</p>
 
     <ContactForm />
 
