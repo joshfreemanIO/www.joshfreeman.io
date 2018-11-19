@@ -50,7 +50,7 @@ const MenuIcon = styled.span`
   width: 100%;
   transition: 0.1s ease;
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
 `
 
