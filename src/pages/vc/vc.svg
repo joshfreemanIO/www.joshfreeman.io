@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="57mm"
+   height="57.200401mm"
+   viewBox="0 0 56.999999 57.200402"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="vc.svg"
+   inkscape:export-filename="/Users/joshfreeman/vc.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="5.5025578"
+     inkscape:cy="133.75078"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g4737"
+     showgrid="false"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-4430.641,-3923.8075)">
+    <g
+       id="g4737"
+       style="stroke:none;stroke-opacity:1">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#dd1a1e;fill-opacity:1;stroke:none;stroke-width:0.60355729;stroke-linejoin:round;stroke-opacity:1"
+         d="m 4446.554,3925.8075 c -7.68,0 -13.913,6.7564 -13.913,15.0813 0,16.9357 15.7604,21.3761 26.5,38.1191 10.1535,-16.6401 26.5,-21.7239 26.5,-38.1191 0,-8.3249 -6.2331,-15.0813 -13.9131,-15.0813 -5.5707,0 -10.3654,3.5655 -12.5869,8.6953 -2.2216,-5.1297 -7.0162,-8.6953 -12.587,-8.6953 z"
+         id="path3850" />
+      <flowRoot
+         transform="matrix(0.52672036,0,0,0.52672036,4406.4053,3833.4592)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:STIXIntegralsUp;-inkscape-font-specification:STIXIntegralsUp;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="flowRoot4724"
+         xml:space="preserve"><flowRegion
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:STIXIntegralsUp;-inkscape-font-specification:STIXIntegralsUp;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="flowRegion4726"><rect
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:STIXIntegralsUp;-inkscape-font-specification:STIXIntegralsUp;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+             y="200.45576"
+             x="71.428574"
+             height="79.285713"
+             width="82.14286"
+             id="rect4728" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Plantagenet Cherokee';-inkscape-font-specification:'Plantagenet Cherokee';fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="flowPara4730">VC</flowPara></flowRoot>    </g>
+  </g>
+</svg>
