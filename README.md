@@ -23,4 +23,29 @@ gatsby develop
 
 ## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+```bash
+firebase login:ci
+
+> Waiting for authentication...
+>
+> ✔  Success! Use this token to login on a CI server:
+>
+> [TOKEN REDACTED]
+>
+> Example: firebase deploy --token "$FIREBASE_TOKEN"
+```
+
+Place token into .env.firebase file and encrypt with jet
+
+Acquire the Codeship AES Key from https://app.codeship.com/projects/288572/configure and place into `codeship.aes`
+
+
+```txt
+# .env.firebase
+FIREBASE_TOKEN=[TOKEN REDACTED]
+```
+
+```bash
+jet encrypt .env.firebase .env.firebase.encrypted
+```
