@@ -11,7 +11,11 @@ const Page = () => (
 
     <PageHeader>Hi, I&apos;m Josh</PageHeader>
 
-    <p>I'm based in San Antonio, Texas with the mission to create good in the world around me. I write React and Elixir with <a href="https://www.grok-interactive.com" target="_blank" rel="noopener noreferrer">Grok Interactive</a> with a dash of business development thrown into the mix.</p>
+    <p>
+      I&apos;m based in San Antonio, Texas with the mission to create good in the world around me. I write React and Elixir for my company&nbsp;
+      <a href="https://www.backmath.com" target="_blank" rel="noopener noreferrer">BackMath</a>
+      .
+    </p>
 
     <p>After graduating from Texas A&amp;M University in 2011, I taught myself web development programming. Since then, I&pos;ve been searching how to intersect software, business, and my interests in meaningful ways.</p>
 
