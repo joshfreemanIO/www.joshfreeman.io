@@ -1,28 +1,27 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# www.joshfreeman.io
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+This website is generated using the [Gatsby site generator](https://www.gatsbyjs.org)
 
 ## Install
 
-Make sure that you have the Gatsby CLI program installed:
 ```sh
-npm install --global gatsby-cli
+# Make sure that you have the Gatsby CLI program installed:
+# See: https://www.gatsbyjs.org
+npm install -g gatsby
+
+# Install dependencies
+npm install
 ```
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
+## Development
+
+```bash
+# Start the develoment server
+
+npm start
 ```
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-gatsby develop
-```
-
-## Deploy
-
+## Deployments to Firebase
 
 ```bash
 firebase login:ci
@@ -42,7 +41,7 @@ Acquire the Codeship AES Key from https://app.codeship.com/projects/288572/confi
 
 
 ```txt
-# .env.firebase
+# .env.firebase, do not enclose in quotes
 FIREBASE_TOKEN=[TOKEN REDACTED]
 ```
 
