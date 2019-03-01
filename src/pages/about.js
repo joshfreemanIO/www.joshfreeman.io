@@ -20,9 +20,9 @@ const Page = () => (
     <p>After graduating from Texas A&amp;M University in 2011, I taught myself web development programming. Since then, I&apos;ve been searching how to intersect software, business, and my interests in meaningful ways.</p>
 
     <p>
-      This site is a statically-generated Gatsby project based upon React; go read the
+      This site is a statically-generated Gatsby project based upon React; go read the&nbsp;
       <a href="https://github.com/joshfreemanIO/www.joshfreeman.io">source code</a>
-      to see how this how this is built and deployed.
+      &nbsp;to see how this how this is built and deployed.
     </p>
   </Layout>
 )
