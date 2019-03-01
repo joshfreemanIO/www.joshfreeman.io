@@ -17,7 +17,7 @@ const Page = () => (
       .
     </p>
 
-    <p>After graduating from Texas A&amp;M University in 2011, I taught myself web development programming. Since then, I&pos;ve been searching how to intersect software, business, and my interests in meaningful ways.</p>
+    <p>After graduating from Texas A&amp;M University in 2011, I taught myself web development programming. Since then, I&apos;ve been searching how to intersect software, business, and my interests in meaningful ways.</p>
 
     <p>
       This site is a statically-generated Gatsby project based upon React; go read the
