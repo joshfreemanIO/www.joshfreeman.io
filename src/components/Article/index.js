@@ -28,7 +28,7 @@ const ArticleHeader = styled.header`
   margin-bottom: 24px;
 `
 
-const Component = ({title, date, html}) => {
+const Component = ({ title, date, html }) => {
   return (
     <Article>
       <ArticleHeader>
@@ -36,7 +36,7 @@ const Component = ({title, date, html}) => {
         <time itemProp="datePublished" dateTime={date}>{date}</time>
       </ArticleHeader>
 
-      <div dangerouslySetInnerHTML={{__html: html}} />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Article>
   )
 }

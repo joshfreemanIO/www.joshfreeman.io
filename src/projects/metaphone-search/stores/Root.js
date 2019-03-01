@@ -1,7 +1,7 @@
 import { types, getRoot } from 'mobx-state-tree'
+import metaphone from 'metaphone'
 import Application from '../models/Application'
 import Search from './Search'
-import metaphone from 'metaphone'
 
 const Root = types
   .model({

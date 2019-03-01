@@ -49,7 +49,7 @@ const IconLink = styled.a`
   }
 `
 
-const SocialIcon = ({platform, children, ...props}) => (
+const SocialIcon = ({ platform, children, ...props }) => (
   <IconLink className={platform} target="_blank" rel="noopener noreferrer" {...props}>{children}</IconLink>
 )
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {inject, observer} from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 import styled from 'styled-components'
 import HamburgerSVG from './icons/hamburger.svg'
 import XSVG from './icons/x.svg'
@@ -54,13 +54,13 @@ const MenuIcon = styled.span`
   left: 0;
 `
 
-const Button = ({store}) => (
+const Button = ({ store }) => (
   <SideMenuToggle
     className={store.UIStore.Navigation.isOpen ? 'active' : ''}
     onClick={store.UIStore.Navigation.toggle}
-    >
-    <MenuIcon className="menu-icon"></MenuIcon>
-    <MenuIcon className="close-icon"></MenuIcon>
+  >
+    <MenuIcon className="menu-icon" />
+    <MenuIcon className="close-icon" />
   </SideMenuToggle>
 )
 

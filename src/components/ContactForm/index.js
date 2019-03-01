@@ -1,7 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 import { types } from 'mobx-state-tree'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const ContactForm = types
   .model({
@@ -21,7 +21,7 @@ const ContactForm = types
       self.submitted = false
     },
     submit() {
-      const formData = new FormData();
+      const formData = new FormData()
 
       formData.append('name', self.name)
       formData.append('email', self.email)
@@ -109,7 +109,7 @@ const Label = styled.label`
 `
 
 const Form = () => (
-  <>
+  <div>
     <InputRow>
       <InputGroup className="half">
         <Label htmlFor="input-name">Name</Label>
@@ -124,19 +124,27 @@ const Form = () => (
 
     <InputGroup>
       <Label htmlFor="input-comments">Question or Comments</Label>
-      <TextArea id="input-comments" onChange={form.update} name="comments" value={form.comments} ></TextArea>
+      <TextArea id="input-comments" onChange={form.update} name="comments" value={form.comments} />
     </InputGroup>
 
-    { form.submitted === false &&
-      <InputGroup>
-        <Button onClick={form.submit}>Submit</Button>
-      </InputGroup>
+    {form.submitted === false
+      && (
+        <InputGroup>
+          <Button onClick={form.submit}>Submit</Button>
+        </InputGroup>
+      )
     }
 
-   { form.submitted &&
-      <p className="center">Thanks for starting a conversation. Need to <span onClick={form.clear} className="link-text">start another</span>?</p>
+    {form.submitted
+      && (
+        <p className="center">
+          Thanks for starting a conversation. Need to
+          <span onClick={form.clear} className="link-text">start another</span>
+          ?
+        </p>
+      )
     }
-  </>
+  </div>
 )
 
 export default observer(Form)

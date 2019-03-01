@@ -1,7 +1,7 @@
 const TaxesOwed = (Brackets, taxableIncome) => {
   const brackets = Brackets
     .sort((left, right) => right[0] > left[0])
-    .filter((bracket) => {
+    .filter(bracket => {
       return taxableIncome > bracket[1]
     })
 

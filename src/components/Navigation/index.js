@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link  } from 'gatsby'
+import { Link } from 'gatsby'
 import { inject, observer } from 'mobx-react'
-import Subscribe from './Subscribe'
 import styled from 'styled-components'
+import Subscribe from './Subscribe'
 
 const Title = styled(Link)`
   background-size: contain;
@@ -84,22 +84,26 @@ const Dot = styled.span`
   color: red;
 `
 
-const Navigation = ({store}) => {
+const Navigation = ({ store }) => {
   return (
     <SiteNavigation className={store.UIStore.Navigation.isOpen ? 'active' : ''}>
-      <Title to="/">joshfreeman<Dot>.</Dot>io</Title>
+      <Title to="/">
+        joshfreeman
+        <Dot>.</Dot>
+        io
+      </Title>
 
       <NavigationLinks>
         <NavGroup className="nav-group">
-          <NavLink  to="/blog" onClick={store.UIStore.Navigation.dismiss}>Blog</NavLink>
+          <NavLink to="/blog" onClick={store.UIStore.Navigation.dismiss}>Blog</NavLink>
         </NavGroup>
 
         <NavGroup className="nav-group">
-          <NavLink  to="/about" onClick={store.UIStore.Navigation.dismiss}>About</NavLink>
+          <NavLink to="/about" onClick={store.UIStore.Navigation.dismiss}>About</NavLink>
         </NavGroup>
 
         <NavGroup className="nav-group">
-          <NavLink  to="/contact" onClick={store.UIStore.Navigation.dismiss}>Contact</NavLink>
+          <NavLink to="/contact" onClick={store.UIStore.Navigation.dismiss}>Contact</NavLink>
         </NavGroup>
       </NavigationLinks>
 

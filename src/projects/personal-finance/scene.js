@@ -1,9 +1,9 @@
 import React from 'react'
-import {inject, observer} from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 import ItemPanel from './components/ItemPanel'
 import CentsToDollars from './utils/CentsToDollars'
 
-const Scene = ({store}) => (
+const Scene = ({ store }) => (
   <div className="personal-finance-scene">
     <div className="item-container">
       <h2>Stats</h2>

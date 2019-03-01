@@ -1,11 +1,11 @@
 import React from 'react'
-import MailchimpSubscribe from "react-mailchimp-subscribe"
-import { observer} from 'mobx-react'
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import { observer } from 'mobx-react'
 import { types } from 'mobx-state-tree'
 import styled from 'styled-components'
 import Ripple from './Ripple'
 
-const url = "//joshfreeman.us19.list-manage.com/subscribe/post-json?u=32e66da2ca4af2c72e46282ed&id=2279bb6428";
+const url = '//joshfreeman.us19.list-manage.com/subscribe/post-json?u=32e66da2ca4af2c72e46282ed&id=2279bb6428'
 
 const SubscribeWrapper = styled.div`
   display: flex;
@@ -102,7 +102,7 @@ const Form = styled.div`
 `
 
 const Subscribe = () => {
-  let email;
+  let email
 
   return (
     <Container>
@@ -111,22 +111,25 @@ const Subscribe = () => {
         Subscribe
       </SubscribeLink>
 
-      <Form className={uimodel.isOpen ? 'active' : ''} >
-        <MailchimpSubscribe url={url} render={({ subscribe, status, message }) => (
+      <Form className={uimodel.isOpen ? 'active' : ''}>
+        <MailchimpSubscribe
+          url={url}
+          render={({ subscribe, status, message }) => (
 
-          <SubscribeWrapper>
-          {status === 'error' && <Error>{message}</Error>}
-            <Input ref={node => (email = node)} type="text" id="subscribe" name="email" placeholder="Email" />
+            <SubscribeWrapper>
+              {status === 'error' && <Error>{message}</Error>}
+              <Input ref={node => (email = node)} type="text" id="subscribe" name="email" placeholder="Email" />
 
-            <SubscribeButton className={status} onClick={() => subscribe({EMAIL: email.value})}>
-              {{
-                'sending': 'Sending...',
-                'error': 'Resubmit?',
-                'success': 'Success!'
-              }[status] || 'Submit'}
-            </SubscribeButton>
-          </SubscribeWrapper>
-        )} />
+              <SubscribeButton className={status} onClick={() => subscribe({ EMAIL: email.value })}>
+                {{
+                  sending: 'Sending...',
+                  error: 'Resubmit?',
+                  success: 'Success!'
+                }[status] || 'Submit'}
+              </SubscribeButton>
+            </SubscribeWrapper>
+          )}
+        />
       </Form>
     </Container>
   )

@@ -1,4 +1,4 @@
-import {types, getRoot} from 'mobx-state-tree'
+import { types, getRoot } from 'mobx-state-tree'
 import TaxesOwed from '../utils/TaxesOwed'
 
 const Taxes = types
@@ -13,11 +13,13 @@ const Taxes = types
     taxForBracket(rate, min, max) {
       if (self.taxableIncome > max) {
         return rate * max
-      } else if (self.taxableIncome > min) {
-        return rate * (self.taxableIncome - min)
-      } else {
-        return 0
       }
+
+      if (self.taxableIncome > min) {
+        return rate * (self.taxableIncome - min)
+      }
+
+      return 0
     }
   }))
 

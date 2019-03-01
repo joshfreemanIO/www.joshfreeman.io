@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
 import MusicalLinkAway from '../components/MusicalLinkAway'
 import SocialIcon from '../components/SocialIcon'
-import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 
 const SocialGroup = styled.div`

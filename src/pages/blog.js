@@ -11,7 +11,7 @@ const Page = ({
   <Layout>
     {/* <PageHeader>Latest Articles</PageHeader> */}
 
-    {edges.map(({node}) => {
+    {edges.map(({ node }) => {
       const { frontmatter, html } = node
       const { title, date } = frontmatter
 

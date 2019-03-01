@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import { Provider } from 'mobx-react'
+import styled, { ThemeProvider } from 'styled-components'
 import Head from './Head'
 import Navigation from '../Navigation'
 import NavigationButton from '../Navigation/Button'
-import { Provider } from 'mobx-react'
 import store from '../../stores'
-import styled, { ThemeProvider } from 'styled-components'
 import theme from '../../theme'
 
 import './stylesheets/app.scss'
@@ -54,9 +54,8 @@ const Layout = ({ children, data }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Head data={data} />
-
         <Provider store={store}>
           <ThemeProvider theme={theme}>
             <MainWrapper>
@@ -69,7 +68,7 @@ const Layout = ({ children, data }) => (
             </MainWrapper>
           </ThemeProvider>
         </Provider>
-      </>
+      </div>
     )}
   />
 )

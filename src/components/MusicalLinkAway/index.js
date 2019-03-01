@@ -1,7 +1,7 @@
 import React from 'react'
 import Sound from 'react-sound'
 import Logoff from './sounds/windows-xp-shutdown.mp3'
-import SocialIcon from '../SocialIcon';
+import SocialIcon from '../SocialIcon'
 /* global soundManager:false */
 
 class MusicalLinkAway extends React.Component {
@@ -16,13 +16,13 @@ class MusicalLinkAway extends React.Component {
   }
 
   componentDidMount() {
-    soundManager.setup({debugMode: false});
+    soundManager.setup({ debugMode: false })
   }
 
   handleSongFinishedPlaying(e) {
     e.preventDefault()
 
-    this.setState({shouldPlay: true})
+    this.setState({ shouldPlay: true })
 
     setTimeout(() => window.open(this.props.href, '_blank'), 300)
   }
@@ -32,8 +32,8 @@ class MusicalLinkAway extends React.Component {
       <SocialIcon onClick={this.handleSongFinishedPlaying} {...this.props}>
         {this.props.children}
 
-        { this.state.shouldPlay &&
-          <Sound url={Logoff} playStatus={Sound.status.PLAYING} />
+        { this.state.shouldPlay
+          && <Sound url={Logoff} playStatus={Sound.status.PLAYING} />
         }
       </SocialIcon>
     )

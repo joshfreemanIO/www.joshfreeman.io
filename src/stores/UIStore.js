@@ -1,5 +1,5 @@
 import { types } from 'mobx-state-tree'
-import Navigation from './../components/Navigation/UIModel'
+import Navigation from '../components/Navigation/UIModel'
 
 const UIStore = types
   .model({

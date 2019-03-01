@@ -1,4 +1,4 @@
-import {types, getRoot} from 'mobx-state-tree'
+import { types, getRoot } from 'mobx-state-tree'
 import Item from '../models/Item'
 
 const Reports = types
@@ -34,7 +34,7 @@ const Reports = types
     }
   }))
 
-const total = (items) => {
+const total = items => {
   return items.reduce((total, item) => total + item.value, 0)
 }
 

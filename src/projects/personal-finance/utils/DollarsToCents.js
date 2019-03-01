@@ -1,1 +1,1 @@
-export default (string) => Number.parseFloat(string.replace(/^\$/, '')) * 100
+export default string => Number.parseFloat(string.replace(/^\$/, '')) * 100
