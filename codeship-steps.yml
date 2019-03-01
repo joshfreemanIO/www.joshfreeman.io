@@ -2,9 +2,16 @@
   service: gatsby
   command: npm install
 
-- name: Build Site
-  service: gatsby
-  command: gatsby build
+- name: Parallel Steps
+  type: parallel
+  steps:
+    - name: Run ES Lint
+      service: gatsby
+      command: npm run lint
+
+    - name: Build Site
+      service: gatsby
+      command: gatsby build
 
 - name: Push to Google Firebase
   service: firebase
