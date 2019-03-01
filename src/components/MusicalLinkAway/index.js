@@ -24,17 +24,20 @@ class MusicalLinkAway extends React.Component {
 
     this.setState({ shouldPlay: true })
 
-    setTimeout(() => window.open(this.props.href, '_blank'), 300)
+    const { href } = this.props
+
+    setTimeout(() => window.open(href, '_blank'), 300)
   }
 
   render() {
+    const { children } = this.props
+    const { shouldPlay } = this.state
+
     return (
       <SocialIcon onClick={this.handleSongFinishedPlaying} {...this.props}>
-        {this.props.children}
+        {children}
 
-        { this.state.shouldPlay
-          && <Sound url={Logoff} playStatus={Sound.status.PLAYING} />
-        }
+        {shouldPlay && <Sound url={Logoff} playStatus={Sound.status.PLAYING} />}
       </SocialIcon>
     )
   }

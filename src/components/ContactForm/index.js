@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React from 'react'
 import { observer } from 'mobx-react'
 import { types } from 'mobx-state-tree'

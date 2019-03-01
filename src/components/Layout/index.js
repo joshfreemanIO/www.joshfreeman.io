@@ -42,7 +42,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
