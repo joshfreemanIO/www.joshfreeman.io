@@ -1,16 +1,10 @@
 import React from 'react'
+import graphql from 'graphql'
 import Layout from '../components/Layout'
 import Article from '../components/Article'
-import PageHeader from '../components/PageHeader'
 
-const Page = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => (
+const PageLayout = edges => (
   <Layout>
-    {/* <PageHeader>Latest Articles</PageHeader> */}
-
     {edges.map(({ node }) => {
       const { frontmatter, html } = node
       const { title, date } = frontmatter
@@ -19,10 +13,14 @@ const Page = ({
         <Article key={node.id} title={title} date={date} html={html} />
       )
     })}
-
-
   </Layout>
 )
+
+const Page = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => PageLayout(edges)
 
 export default Page
 

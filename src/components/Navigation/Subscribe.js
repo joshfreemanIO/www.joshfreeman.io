@@ -100,9 +100,25 @@ const Form = styled.div`
     opacity: 1;
   }
 `
+const uimodel = types
+  .model()
+  .props({
+    email: '',
+    message: '',
+    isOpen: false
+  })
+  .actions(self => ({
+    open() {
+      self.isOpen = true // eslint-disable-line no-param-reassign
+    }
+  }))
+  .create({})
 
 const Subscribe = () => {
   let email
+  const setEmail = node => {
+    email = node
+  }
 
   return (
     <Container>
@@ -118,7 +134,7 @@ const Subscribe = () => {
 
             <SubscribeWrapper>
               {status === 'error' && <Error>{message}</Error>}
-              <Input ref={node => (email = node)} type="text" id="subscribe" name="email" placeholder="Email" />
+              <Input ref={setEmail} type="text" id="subscribe" name="email" placeholder="Email" />
 
               <SubscribeButton className={status} onClick={() => subscribe({ EMAIL: email.value })}>
                 {{
@@ -135,18 +151,5 @@ const Subscribe = () => {
   )
 }
 
-const uimodel = types
-  .model()
-  .props({
-    email: '',
-    message: '',
-    isOpen: false
-  })
-  .actions(self => ({
-    open() {
-      self.isOpen = true
-    }
-  }))
-  .create({})
 
 export default observer(Subscribe)

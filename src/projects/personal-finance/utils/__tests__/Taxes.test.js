@@ -1,5 +1,4 @@
-import TaxesOwed from '../TaxesOwed'
-import { SingleBrackets } from '../TaxesOwed'
+import TaxesOwed, { SingleBrackets } from '../TaxesOwed'
 
 test('Taxes owed calculates correctly', () => {
   expect(TaxesOwed(SingleBrackets, 9525)).toBe(952.50)

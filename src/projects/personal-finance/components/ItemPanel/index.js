@@ -15,14 +15,18 @@ const RenderPanel = observer(({ item }) => {
 const EditPanel = observer(({ item }) => {
   return (
     <div className="item-panel">
-      <label htmlFor="edit-name">Name</label>
-      <input id="edit-name" type="text" name="name" value={item.name} onChange={item.update} />
+      <label htmlFor="edit-name">
+        Name
+        <input id="edit-name" type="text" name="name" value={item.name} onChange={item.update} />
+      </label>
 
-      <label htmlFor="edit-name">Value</label>
-      <input id="edit-value" type="text" name="value" value={item.value} onChange={item.updateValue} />
+      <label htmlFor="edit-value">
+        Value
+        <input id="edit-value" type="text" name="value" value={item.value} onChange={item.updateValue} />
+      </label>
 
-      <button onClick={item.cancel}>Cancel</button>
-      <button onClick={item.save}>Save</button>
+      <button onClick={item.cancel} type="submit">Cancel</button>
+      <button onClick={item.save} type="submit">Save</button>
     </div>
   )
 })

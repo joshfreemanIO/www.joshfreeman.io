@@ -6,7 +6,7 @@ const Search = types
   })
   .actions(self => ({
     updateSearchTerm(term) {
-      self.searchTerm = term
+      self.searchTerm = term // eslint-disable-line no-param-reassign
     }
   }))
   .views(self => ({

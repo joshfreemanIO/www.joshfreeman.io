@@ -26,7 +26,7 @@ const Page = () => (
       <title>Contact Josh Freeman</title>
     </Helmet>
 
-    <PageHeader>Let's talk</PageHeader>
+    <PageHeader>Let&apos;s talk</PageHeader>
 
     <ContactForm />
 

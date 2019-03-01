@@ -10,10 +10,9 @@ const Root = types
   })
   .views(self => ({
     get filteredApplications() {
-      const searchTerm = getRoot(self).search.searchTerm
+      const { searchTerm } = getRoot(self).search
       const metaphoneTerm = metaphone(searchTerm)
 
-      console.log(`${searchTerm} => ${metaphoneTerm}`)
       if (metaphoneTerm === '') {
         return []
       }

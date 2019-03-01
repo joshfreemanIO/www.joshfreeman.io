@@ -1,14 +1,10 @@
-import { types, getRoot } from 'mobx-state-tree'
-import TaxesOwed from '../utils/TaxesOwed'
+import { types } from 'mobx-state-tree'
 
 const Taxes = types
   .model()
   .views(self => ({
     get taxableIncome() {
       return 100000
-    },
-    get incomeTaxOwed() {
-
     },
     taxForBracket(rate, min, max) {
       if (self.taxableIncome > max) {

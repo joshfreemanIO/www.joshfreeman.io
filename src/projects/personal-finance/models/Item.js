@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { types, getSnapshot, applySnapshot } from 'mobx-state-tree'
 
 const Item = types
@@ -10,7 +11,6 @@ const Item = types
   })
   .actions(self => ({
     set(name, value) {
-      console.log(name, value)
       self[name] = value
     },
     updateValue(event) {
@@ -23,12 +23,10 @@ const Item = types
       }
     }
   }))
-  .views(self => ({
-  }))
 
 const Editable = types
   .model()
-  .volatile(self => ({
+  .volatile(() => ({
     isEditing: false,
     previousSnapshot: {}
   }))

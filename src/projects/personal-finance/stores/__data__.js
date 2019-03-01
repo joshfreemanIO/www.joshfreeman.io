@@ -16,7 +16,7 @@ export default {
     {
       name: 'Water',
       value: 2500,
-      frequencey: 'Bi-Monthly	Expenses'
+      frequencey: 'Bi-Monthly Expenses'
     },
     {
       name: 'Electricity',
@@ -33,7 +33,7 @@ export default {
     {
       name: 'Renter’s Insurance',
       value: 7500,
-      frequencey: 'Annual	Expenses',
+      frequencey: 'Annual Expenses',
       category: 'Housing'
     },
     {
