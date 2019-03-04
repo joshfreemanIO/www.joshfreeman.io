@@ -24,6 +24,18 @@ const Title = styled(Link)`
     height: 64px;
     line-height: 64px;
   }
+
+  @media screen and (max-width: 424px) {
+    font-size: 40px;
+    height: 64px;
+    line-height: 64px;
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 32px;
+    height: 64px;
+    line-height: 68px;
+  }
 `
 
 const SiteNavigation = styled.nav`
