@@ -156,6 +156,7 @@ const Page = () => (
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image:alt" content="The Dragon: a Vietnamese Card Combination" />
+      <meta name="twitter:image" content={VCPng} />
       <meta name="twitter:site" content="@joshfreemanIO" />
     </Helmet>
   </Main>
