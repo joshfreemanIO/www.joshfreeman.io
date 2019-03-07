@@ -4,11 +4,13 @@
   "version": "1.0.0",
   "author": "Josh Freeman <him@joshfreeman.io>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.31",
     "gatsby-plugin-manifest": "^2.0.2-rc.1",
     "gatsby-plugin-offline": "^2.0.9",
     "gatsby-plugin-react-helmet": "^3.0.0-rc.1",
     "gatsby-plugin-sass": "^2.0.0-beta.10",
+    "gatsby-plugin-styled-components": "^3.0.6",
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-remark": "^2.1.6",
     "metaphone": "^1.0.4",
@@ -21,7 +23,7 @@
     "react-helmet": "^5.2.0",
     "react-mailchimp-subscribe": "^2.0.2",
     "react-sound": "^1.2.0",
-    "styled-components": "^4.0.2"
+    "styled-components": "^4.1.3"
   },
   "keywords": [
     "gatsby"
