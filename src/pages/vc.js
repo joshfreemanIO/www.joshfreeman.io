@@ -150,6 +150,9 @@ const Page = () => (
       <Diamond />
       <Heart />
     </Cards>
+
+    <p>Sean Wen and Andrew Ho taught me VC while living together in San Antonio. If you eat food, take an afternoon to visit <a href="https://instagram.com/pinchboilhouse">@PinchBoilHouse</a>–you won&apos;t be disappointed. <em>&nbsp;6403:&nbsp;Chill&nbsp;Vibes&nbsp;Only</em></p>
+
     <Helmet>
       <meta property="og:title" content="Vietnamese Cards (Tiến lên)" />
       <meta property="og:description" content="The national game of Vietnam, best played with 4 players" />
