@@ -3,6 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import VCPng from './vc/vc.png'
+import '../components/Layout/stylesheets/app.scss'
 
 const Title = styled.h1`
   display: inline-block;
@@ -40,6 +41,8 @@ const Main = styled.main`
   padding: 24px;
   max-width: 780px;
   margin: 0 auto;
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 21px;
 `
 
 const Bold = styled.span`
