@@ -85,6 +85,13 @@ const Card = styled(({ rank, suit }) => (
   font-size: 24px
 `
 
+const Attribution = styled.p`
+  margin-top: 37px;
+`
+
+const CVO = styled.em`
+  font-style: italic;
+`
 
 const Page = () => (
   <Main>
@@ -151,7 +158,7 @@ const Page = () => (
       <Heart />
     </Cards>
 
-    <p>Sean Wen and Andrew Ho taught me VC while living together in San Antonio. If you eat food, take an afternoon to visit <a href="https://instagram.com/pinchboilhouse">@PinchBoilHouse</a>–you won&apos;t be disappointed. <em>&nbsp;6403:&nbsp;Chill&nbsp;Vibes&nbsp;Only</em></p>
+    <Attribution>Sean Wen and Andrew Ho taught me VC while living together in San Antonio. If you eat food, take an afternoon to visit <a href="https://instagram.com/pinchboilhouse" target="_blank" rel="noopener noreferrer">@PinchBoilHouse</a>–you won&apos;t be disappointed. <CVO>&nbsp;6403:&nbsp;Chill&nbsp;Vibes&nbsp;Only.</CVO></Attribution>
 
     <Helmet>
       <meta property="og:title" content="Vietnamese Cards (Tiến lên)" />
