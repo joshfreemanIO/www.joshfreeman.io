@@ -17,9 +17,13 @@ exports.createPages = ({ actions, graphql }) => {
             html
             frontmatter {
               title
+              description
+              excerpt
               path
-              postImage
-              postImageAlt
+              ogImage {
+                publicURL
+              }
+              ogImageAlt
             }
           }
         }
