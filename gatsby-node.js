@@ -18,6 +18,8 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               title
               path
+              postImage
+              postImageAlt
             }
           }
         }
@@ -33,6 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {}, // additional data can be passed via context
+        frontmatter: node.frontmatter
       })
     })
   })
