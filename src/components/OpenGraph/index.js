@@ -1,13 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import moment from 'moment'
 
 const OpenGraph = ({
   title = '', description = '', ogImage = { publicURL: '' }, ogImageAlt = '', path = '', tags = [], date
 }) => {
   return (
     <Helmet>
-      <meta property="article:published_time" content={moment(date).format('YYYY-MM-DD')} />
+      <meta property="article:published_time" content={date} />
       <meta property="article:author" content="https://www.joshfreeman.io/about" />
       <meta property="article:section" content="Software Development" />
       <meta property="article:tag" content={tags.join(',')} />
