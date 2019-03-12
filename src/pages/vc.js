@@ -3,6 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import VCPng from './vc/vc.png'
+import OpenGraph from '../components/OpenGraph'
 import '../components/Layout/stylesheets/app.scss'
 
 const Title = styled.h1`
@@ -160,18 +161,15 @@ const Page = () => (
 
     <Attribution>Sean Wen and Andrew Ho taught me VC while living together in San Antonio. If you eat food, take an afternoon to visit <a href="https://instagram.com/pinchboilhouse" target="_blank" rel="noopener noreferrer">@PinchBoilHouse</a>–you won&apos;t be disappointed. <CVO>&nbsp;6403:&nbsp;Chill&nbsp;Vibes&nbsp;Only.</CVO></Attribution>
 
-    <Helmet>
-      <meta property="og:title" content="Vietnamese Cards (Tiến lên)" />
-      <meta property="og:description" content="The national game of Vietnam, best played with 4 players" />
-      <meta property="og:image" content={VCPng} />
-      <meta property="og:url" content="https://www.joshfreeman.io/vc" />
-      <meta property="og:site_name" content="Josh Freeman" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image:alt" content="The Dragon: a Vietnamese Card Combination" />
-      <meta name="twitter:image" content={VCPng} />
-      <meta name="twitter:site" content="@joshfreemanIO" />
-    </Helmet>
+    <OpenGraph
+      title="Vietnamese Cards (Tiến lên)"
+      description="The unofficial national card game of Vietnam, best played with 4 players"
+      ogImage={{ publicURL: VCPng }}
+      ogImageAlt="The Dragon: The Vietnamese Card Combination"
+      path="/vc"
+      tags="card games,vietnamese cards"
+      date="2019-03-08"
+    />
   </Main>
 )
 
