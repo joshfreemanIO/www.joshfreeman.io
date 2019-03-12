@@ -24,6 +24,7 @@ exports.createPages = ({ actions, graphql }) => {
                 publicURL
               }
               ogImageAlt
+              tags
             }
           }
         }
