@@ -9,7 +9,7 @@ const OpenGraph = ({
       <meta property="article:published_time" content={date} />
       <meta property="article:author" content="https://www.joshfreeman.io/about" />
       <meta property="article:section" content="Software Development" />
-      <meta property="article:tag" content={tags.join(',')} />
+      <meta property="article:tag" content={Array.isArray(tags) ? tags.join(',') : `${tags}`} />
       <meta property="article:publisher" content="https://www.joshfreeman.io" />
 
       <meta property="og:description" content={description} />
