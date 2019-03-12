@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Article from '../components/Article'
 import OpenGraph from '../components/OpenGraph'

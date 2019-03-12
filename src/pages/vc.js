@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-one-expression-per-line, max-len */
 import React from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import VCPng from './vc/vc.png'
 import OpenGraph from '../components/OpenGraph'
