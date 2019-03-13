@@ -11,7 +11,7 @@ description: >
 
   https://www.massventure.com/
 summary: >
-  During MassVenture, I lead the integration of ACH operations between investement clients and GoldStar, their escrow service for crowd-funding.
+  During MassVenture, I lead the integration of ACH operations between investment clients and GoldStar, their escrow service for crowd-funding.
 
 achievements:
   - Coordinated ACH financial transactions between investors and escrow institutions

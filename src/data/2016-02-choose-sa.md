@@ -6,9 +6,9 @@ framework: UIKit
 platform: iOS
 logo: "./images/satx-next.png"
 description: >
-  SATX NEXT is an iOS application that highlights the events and speakers for the Casa San Antonio station at SXSW 2016, 2017. SATX Next was rebraded from ChooseSA in 2017.
+  SATX NEXT is an iOS application that highlights the events and speakers for the Casa San Antonio station at SXSW 2016, 2017. SATX Next was rebranded from ChooseSA in 2017.
 summary: >
-  For SATX NEXT, I built the iOS application from client requirements and was the prinicipal contact for the project.
+  For SATX NEXT, I built the iOS application from client requirements and was the principle contact for the project.
 
 achievements:
   - Generated masked images for display from inconsistent user profile images

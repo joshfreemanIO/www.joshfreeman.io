@@ -12,5 +12,5 @@ summary: >
 
 achievements:
   - Animated the repositioning of lawn signs as a user indicates their political views
-  - Designed the sizing algorithm for relative similarity within the candidate fiel
+  - Designed the sizing algorithm for relative similarity within the candidate field
 ---
