@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-filesystem',
@@ -13,8 +12,14 @@ module.exports = {
         name: 'posts',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'vitae',
+        path: `${__dirname}/src/data/`,
+      },
+    },
     'gatsby-transformer-remark',
-    'gatsby-plugin-styled-components',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -24,5 +29,7 @@ module.exports = {
         maxWidth: 1080,
       },
     },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-styled-components',
   ],
 }

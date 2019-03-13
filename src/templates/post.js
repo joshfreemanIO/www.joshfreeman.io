@@ -4,9 +4,7 @@ import Layout from '../components/Layout'
 import Article from '../components/Article'
 import OpenGraph from '../components/OpenGraph'
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+const Template = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
 
   return (
@@ -36,3 +34,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default Template
