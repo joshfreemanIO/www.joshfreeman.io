@@ -1,0 +1,128 @@
+- name: Captix Events
+  date: March 2014 - January 2015?
+  languages: PHP 5.1
+  frameworks: Laravel 4.1
+  platform: self-hosted by client
+  logo: data/vitae/captix.png
+  description: >
+    Captix Events is an online registration and event management system designed for large organizations who run hundreds of local, regional and international events.
+
+    https://highattendance.com/audience-generation/
+  summary: >
+    My role on the project was lead programmer;  I was responsible for the architectural design. I was predominately responsible for the architecutural design and software infrastructure.
+
+    Captix Events was rebranded to High Attendance sometime after my time with the project.
+  achievements:
+    - Importing and managing large data sets for enterprise marketing campaigns
+    - Building and managing event invitations, reminder emails, and campaign metric tracking
+    - Exporting survey and other capmaign data for use with SalesForce
+    - Implementing test-driven development (TDD) and other key infrastructure improvements for quality control
+
+
+- name: PCSgrades
+  date: November 2014 - September 2015
+  languages: Ruby 2.3, HTML/CSS/JavaScript
+  frameworks: Rails 4
+  platform: Heroku
+  description: >
+    PCSgrades is service for US Military members and their families to rate and review neighborhoods, base housing, REALTORS®, mortgage lenders, schools and other related services.
+
+    https://www.pcsgrades.com/
+  summary: >
+
+  achievements:
+    - Highlighted the reviewed services near specified PCS locations on an interactive maps
+    - Developed the backend Rails architecture to support the service
+    - Designed and implemented the UI component model for displaying variable data
+
+
+- name: MassVenture
+  date: February 2015 - May 2015
+  languages: Ruby 2.3, HTML/CSS/JavaScript
+  frameworks: Rails 4
+  platform: Heroku
+  description: >
+    MassVenture is Texas' first state-approved equity crowdfunding portal for real estate investments.
+
+    https://www.massventure.com/
+  summary: >
+
+  achievements:
+    - Coordinated ACH financial transactions between investors and escrow institutions
+    - Implemented Know Your Customer (KYC) procedures for investement clients
+
+- name: SolarHostSA
+  date: October 2015 - February 2016
+  language: Ruby 2.3
+  platform: AWS Beanstalk
+  description: >
+    The CPS Energy and PowerFin SolarHost program lets local households and businesses realize the benefits of local solar with zero costs.
+
+    https://www.solarhostsa.com/
+  summary: >
+  achievements:
+  - Built the synchronization mechanism beween CPS Energy and Salesforce APIs
+  - Encrypted and signed sensitive user files with PGP for transmission
+  - Hosted underlying infrastructure on AWS with Elastic Beanstalk
+
+- name: SoloShot Cloud
+  date: February 2016 - June 2016
+  language: Ruby 2.3
+  framework: Rails 4
+  platform: Heroku
+  description: >
+  summary: >
+  achievements:
+    - Architected and built the API to serve the web and mobile clients
+    - Implemented a serialization cache to reduce API response times
+
+- name: ChooseSA, SATX NEXT
+  date: February 2016, update in January 2017 - February 2017
+  language: Swift 2, 3
+  framework: UIKit
+  platform: iOS
+  description: >
+    ChoosSA is an iOS application that highlights the events and speakers for the Casa San Antonio station at SXSW 2016. ChooseSA was rebranded to SATX Next in 2017.
+  summary: >
+
+  achievements:
+    - Generated masked images for display from inconsistent user profile images
+    - Integrated an adhoc API to display speaker and event data
+    - Converted a highly stylized design into an iOS application
+
+- name: Tech Bloc
+  date: Early 2017
+  language: JavaScript (ECMAscript 2017)
+  framework: React
+  platform: iOS
+  description: >
+  summary: >
+  achievements:
+    - Aggregated social events from disparate sources into a single feed on Google Firebase
+    - Integrated automated testing and deployment of serverless code into AWS Lambda
+
+- name: Vote Easy
+  date: February 2018 - April 2018
+  language: JavaScript (ECMAscript 2017)
+  framework: React, MobX
+  platform: Web
+  description: >
+  summary: >
+
+  achievements:
+    - Animated the repositioning of lawn signs as a user indicates their political views
+    - Designed the sizing algorithm for relative similarity within the candidate field
+
+- name: Agent Alert
+  date: October 2018 - November 2018
+  language: JavaScript (ECMAscript 2017)
+  framework: React Native
+  platform: iOS, Android
+  description: >
+  summary: >
+  achievements:
+    - Designed the app flow
+    - Implemented push notifications for updates to listings
+    - Connected a GraphQL API to pull in listing data from the private service
+
+
