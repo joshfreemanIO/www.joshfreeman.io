@@ -118,7 +118,6 @@ const InsertAt = (collection, index, jsx) => {
   collection.splice(index, 0, jsx)
   return collection
 }
-title = '', description = '', ogImage = { publicURL: '' }, ogImageAlt = '', path = '', tags = [], date
 
 const PageLayout = edges => (
   <Layout>
