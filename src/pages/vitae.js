@@ -121,7 +121,7 @@ const InsertAt = (collection, index, jsx) => {
 
 const PageLayout = edges => (
   <Layout>
-    <OpenGraph title="Software Vitae for Joshua Freeman" ogImage={{ publicURL: joshLOGO }} ogImageAlt="The logo for joshfreeman.io" />
+    <OpenGraph title="Software Vitae" ogImage={{ publicURL: joshLOGO }} ogImageAlt="The logo for joshfreeman.io" />
 
     <h1>Software Vitae</h1>
 
