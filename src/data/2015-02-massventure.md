@@ -4,7 +4,7 @@ date: February 2015 - May 2015
 language: Ruby 2.3, HTML/CSS/JavaScript
 framework: Rails 4
 platform: Heroku
-site: "https://www.massventure.com
+site: "https://www.massventure.com"
 logo: "./images/massventure.png"
 description: >
   MassVenture is Texas' first state-approved equity crowdfunding portal for real estate investments.
