@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import OpenGraph from '../components/OpenGraph'
+import joshLOGO from './logo.png'
 
 const Container = styled.div`
   &:not(:last-of-type) {
@@ -116,9 +118,12 @@ const InsertAt = (collection, index, jsx) => {
   collection.splice(index, 0, jsx)
   return collection
 }
+title = '', description = '', ogImage = { publicURL: '' }, ogImageAlt = '', path = '', tags = [], date
 
 const PageLayout = edges => (
   <Layout>
+    <OpenGraph title="Software Vitae for Joshua Freeman" ogImage={{ publicURL: joshLOGO }} ogImageAlt="The logo for joshfreeman.io" />
+
     <h1>Software Vitae</h1>
 
     <p>
