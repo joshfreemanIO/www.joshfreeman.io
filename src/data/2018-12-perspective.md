@@ -10,7 +10,6 @@ description: >
 summary: >
   I am currently authoring this framework.
 achievements:
-  - Designed the app flow
-  - Implemented push notifications for updates to listings
-  - Connected a GraphQL API to pull in listing data from the private service
+  - Bi-way communication between client and server over websockets
+  - Reactively project domain state from a series of domain events
 ---
