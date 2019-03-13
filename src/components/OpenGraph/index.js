@@ -24,8 +24,8 @@ const OpenGraph = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@joshfreemanIO" />
       <meta name="twitter:image:alt" content={ogImageAlt} />
-      <meta name="twitter:image:src" content={ogImage.publicURL} />
-      <meta name="twitter:image" content={ogImage.publicURL} />
+      <meta name="twitter:image:src" content={`https://www.joshfreeman.io${ogImage.publicURL}`} />
+      <meta name="twitter:image" content={`https://www.joshfreeman.io${ogImage.publicURL}`} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:site" content="@joshfreemanIO" />
