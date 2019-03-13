@@ -106,21 +106,34 @@ const Work = ({ name, achievements, date, language, framework, platform, descrip
   )
 }
 
+const Disclaimer = () => {
+  return (
+    <p>The following applications were built while employed at Grok Interactive.</p>
+  )
+}
+
+const InsertAt = (collection, index, jsx) => {
+  collection.splice(index, 0, jsx)
+  return collection
+}
+
 const PageLayout = edges => (
   <Layout>
     <h1>Software Vitae</h1>
 
     <p>
-      Currently, I am authoring <a href="https://github.com/backmath/perspective">Perspective</a>, an event-sourcing framework in Elixir. This framework will serve as the API foundation for future projects.
+      Currently, I am authoring <a href="https://github.com/backmath/perspective">Perspective</a>, an event-sourcing framework in Elixir. This framework will serve as the foundation for future projects.
     </p>
 
     <hr />
 
-    {edges.map(({ node }) => {
+    {InsertAt(edges.map(({ node }) => {
       return (<Work {...node.frontmatter} key={node.frontmatter.name} />)
-    })}
+    }), 1, <Disclaimer />)}
+
   </Layout>
 )
+
 
 const Page = ({
   data: {
