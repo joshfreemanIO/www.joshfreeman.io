@@ -139,7 +139,7 @@ const Form = () => (
     {form.submitted
       && (
         <p className="center">
-          Thanks for starting a conversation. Need to
+          Thanks for starting a conversation. Need to&nbsp;
           <span onClick={form.clear} className="link-text">start another</span>
           ?
         </p>
