@@ -1,8 +1,8 @@
 ---
-path: "/blog/getting-started-in-ios-game-development"
+path: "/getting-started-in-ios-game-development"
 date: "2019-03-11"
 title: "Getting Started in iOS Game Development"
-description: "A short post with references to quickly learn the basics of programming games with Swift in XCode"
+description: "A short post with references to quickly learn the basics of programming iOS games in XCode"
 excerpt: "In general, API references and documentation are the primary resource for developers to learn more deeply about their tools from the creators."
 ogImage: "./images/2019-03-11-getting-started-in-ios-game-development/open-graph.png"
 ogImageAlt: "Xcode IDE with a script"
