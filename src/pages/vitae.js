@@ -24,6 +24,9 @@ const Header = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 37px;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `
 
 const LogoContainer = styled.div`
@@ -32,6 +35,11 @@ const LogoContainer = styled.div`
   align-items: center;
   margin-right: 16px;
   width: 30%;
+  padding: 36px;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    order: 10;
+  }
 `
 
 const Img = styled.img`
