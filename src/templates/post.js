@@ -16,8 +16,8 @@ const Template = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($postPath: String!) {
+    markdownRemark(frontmatter: { path: { eq: $postPath } }) {
       html
       frontmatter {
         date(formatString: "YYYY-MM-DD")
