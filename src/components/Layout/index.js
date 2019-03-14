@@ -27,7 +27,7 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  overflow: scroll;
+  overflow: scroll-y;
   padding: 30px 150px;
 
   @media screen and (max-width: 1080px) {
