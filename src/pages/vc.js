@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import VCPng from './vc/vc.png'
 import OpenGraph from '../components/OpenGraph'
-import '../components/Layout/stylesheets/app.scss'
 
 const Title = styled.h1`
   display: inline-block;

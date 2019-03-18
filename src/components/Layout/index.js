@@ -8,8 +8,7 @@ import Navigation from '../Navigation'
 import NavigationButton from '../Navigation/Button'
 import store from '../../stores'
 import theme from '../../theme'
-
-import './stylesheets/app.scss'
+import Style from './styles/css'
 
 const MainWrapper = styled.div`
   display: flex;
@@ -60,6 +59,7 @@ const Layout = ({ children }) => (
         <Provider store={store}>
           <ThemeProvider theme={theme}>
             <MainWrapper>
+              <Style />
               <Navigation />
               <NavigationButton />
 
