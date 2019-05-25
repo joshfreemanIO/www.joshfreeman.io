@@ -88,10 +88,6 @@ const Attribution = styled.p`
   margin-top: 37px;
 `
 
-const CVO = styled.em`
-  font-style: italic;
-`
-
 const Page = () => (
   <Main>
     <Cards>
@@ -157,7 +153,7 @@ const Page = () => (
       <Heart />
     </Cards>
 
-    <Attribution>Sean Wen and Andrew Ho taught me VC while living together in San Antonio. If you eat food, take an afternoon to visit <a href="https://instagram.com/pinchboilhouse" target="_blank" rel="noopener noreferrer">@PinchBoilHouse</a>–you won&apos;t be disappointed. <CVO>&nbsp;6403:&nbsp;Chill&nbsp;Vibes&nbsp;Only.</CVO></Attribution>
+    <Attribution>Sean Wen and Andrew Ho taught me VC while living together in San Antonio. If you eat food, take an afternoon to visit <a href="https://instagram.com/pinchboilhouse" target="_blank" rel="noopener noreferrer">@PinchBoilHouse</a>–you won&apos;t be disappointed.</Attribution>
 
     <OpenGraph
       title="Vietnamese Cards (Tiến lên)"
