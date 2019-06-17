@@ -4,7 +4,9 @@ import Layout from '../components/Layout'
 import Article from '../components/Article'
 import OpenGraph from '../components/OpenGraph'
 
-const Template = ({ data }) => {
+// const Template = ({ data }) => {
+const Template = data => {
+  console.log(data)
   const { frontmatter, html } = data.markdownRemark
 
   return (
@@ -16,8 +18,8 @@ const Template = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query($postPath: String!) {
-    markdownRemark(frontmatter: { path: { eq: $postPath } }) {
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "YYYY-MM-DD")
@@ -34,5 +36,6 @@ export const pageQuery = graphql`
     }
   }
 `
+
 
 export default Template

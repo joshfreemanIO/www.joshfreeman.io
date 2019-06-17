@@ -1,15 +1,16 @@
 const path = require('path')
+const transformNode = require('./src/papers/tools/transformNode').default
+const createPagesForPapers = require('./src/papers/tools/createPagesForPapers').default
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve('src/templates/post.js')
 
-  return graphql(`
+  const blog = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000,
         filter: {
           fileAbsolutePath: {
             regex: "/src/posts/.*.md$/"
@@ -35,29 +36,37 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+  `)
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {
-          postPath: node.frontmatter.path
-        },
-        frontmatter: node.frontmatter
-      })
+  if (blog.errors) {
+    throw blog.errors
+  }
 
-      createPage({
-        path: `${node.frontmatter.path}.html`,
-        component: blogPostTemplate,
-        context: {
-          postPath: node.frontmatter.path
-        },
-        frontmatter: node.frontmatter
-      })
+  blog.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: blogPostTemplate,
+      context: {
+        postPath: node.frontmatter.path
+      },
+      frontmatter: node.frontmatter
+    })
+
+    createPage({
+      path: `${node.frontmatter.path}.html`,
+      component: blogPostTemplate,
+      context: {
+        postPath: node.frontmatter.path
+      },
+      frontmatter: node.frontmatter
     })
   })
+
+  await createPagesForPapers(graphql, createPage)
+}
+
+exports.onCreateNode = ({ node, getNode }) => {
+  if (node.internal.type === 'MarkdownRemark' && getNode(node.parent).sourceInstanceName === 'papers') {
+    node = transformNode(node, __dirname)
+  }
 }

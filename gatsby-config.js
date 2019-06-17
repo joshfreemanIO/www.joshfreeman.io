@@ -19,6 +19,13 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'papers',
+        path: `${__dirname}/src/papers/`,
+      },
+    },
     'gatsby-transformer-remark',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
