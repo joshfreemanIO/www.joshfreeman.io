@@ -1,0 +1,3 @@
+- Proverb: Lean Not...
+  - Proverbs 3:5-6
+  - Romans 14:5-6

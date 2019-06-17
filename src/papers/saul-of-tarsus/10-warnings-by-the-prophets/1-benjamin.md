@@ -1,0 +1,4 @@
+  - Tribe of Benjamin
+    - Genesis 49:1, 27
+    - Matthew 7:15
+    - Phillipians 3:4-5

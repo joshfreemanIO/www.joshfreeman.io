@@ -1,0 +1,7 @@
+  - Hypocracy
+    - Being a Hypocrite: 1st Corinthians 9:20-22
+    - Blaming Peter for Being a Hypocrite
+      - Galatians 2:14
+    - Nazarene vow, what about The Law: Acts 21:20-21
+    - Private counsel: Galatians 2:2
+    - Titus' Circumcision: Galatians 2:3-4

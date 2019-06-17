@@ -1,0 +1,4 @@
+  - Brought Under Power
+    - Daniel 11:3-4
+    - 1 Corinthians 10:23-24
+    - 1 Corinthians 10:12

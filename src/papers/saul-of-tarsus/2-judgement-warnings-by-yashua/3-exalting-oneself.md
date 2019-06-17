@@ -1,0 +1,2 @@
+  - Exalting Oneself
+    - 2Co 11:30

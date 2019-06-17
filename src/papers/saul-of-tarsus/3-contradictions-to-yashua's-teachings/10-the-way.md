@@ -1,0 +1,3 @@
+  - The Way
+    - John 14:6
+    - 1 Corinthians 5:5

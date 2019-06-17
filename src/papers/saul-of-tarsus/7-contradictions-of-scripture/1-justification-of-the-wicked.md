@@ -1,0 +1,4 @@
+  - Justification of the Wicked
+    - Exodus 23:7
+    - Proverbs 17:15
+    - Romans 4:5

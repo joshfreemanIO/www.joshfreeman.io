@@ -1,0 +1,4 @@
+   - The Promises of YHWH to Abraham
+    - Genesis 22:17-18
+    - Genesis 26:4-5
+    - Romans 4:13,16

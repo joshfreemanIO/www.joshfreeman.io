@@ -1,0 +1,1 @@
+  - Hebrews 5:6 and Psalm 110

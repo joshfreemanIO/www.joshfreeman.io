@@ -1,0 +1,3 @@
+  - The Two Commandments
+    - Matthew 22:37-40
+    - Galatians 5:14

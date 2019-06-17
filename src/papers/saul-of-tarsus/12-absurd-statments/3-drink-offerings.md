@@ -1,0 +1,3 @@
+- Drink Offerings
+  - Luke 22:20
+  - Philippeans 2:17
