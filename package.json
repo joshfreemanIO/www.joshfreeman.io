@@ -41,7 +41,7 @@
     "develop": "gatsby develop",
     "start": "yarn run develop",
     "lint": "eslint src/",
-    "test": "jest"
+    "test": "jest src/"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
