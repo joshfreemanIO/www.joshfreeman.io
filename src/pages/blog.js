@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Article from '../components/Article'
+import Layout from '@components/Layout'
+import Article from '@components/Article'
 
 const PageLayout = edges => (
   <Layout>

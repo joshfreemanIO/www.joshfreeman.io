@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-one-expression-per-line, max-len */
 import React from 'react'
 import styled from 'styled-components'
+import OpenGraph from '@components/OpenGraph'
 import VCPng from './vc/vc.png'
-import OpenGraph from '../components/OpenGraph'
 
 const Title = styled.h1`
   display: inline-block;

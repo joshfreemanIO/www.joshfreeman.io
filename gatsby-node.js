@@ -70,3 +70,13 @@ exports.onCreateNode = ({ node, getNode }) => {
     node = transformNode(node, __dirname)
   }
 }
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components')
+      }
+    }
+  })
+}

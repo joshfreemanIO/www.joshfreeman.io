@@ -2,8 +2,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import OpenGraph from '../components/OpenGraph'
+import Layout from '@components/Layout'
+import OpenGraph from '@components/OpenGraph'
 import joshLOGO from './logo.png'
 
 const Container = styled.div`

@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import Layout from '../../components/Layout'
+import Layout from '@components/Layout'
+import PageHeader from '@components/PageHeader'
 import ContactForm from './ContactForm'
 import MusicalLinkAway from './MusicalLinkAway'
 import SocialIcon from './SocialIcon'
-import PageHeader from '../../components/PageHeader'
 
 const SocialGroup = styled.div`
   display: flex;
