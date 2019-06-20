@@ -51,15 +51,6 @@ exports.createPages = async ({ actions, graphql }) => {
       },
       frontmatter: node.frontmatter
     })
-
-    createPage({
-      path: `${node.frontmatter.path}.html`,
-      component: blogPostTemplate,
-      context: {
-        postPath: node.frontmatter.path
-      },
-      frontmatter: node.frontmatter
-    })
   })
 
   await createPagesForPapers(graphql, createPage)
