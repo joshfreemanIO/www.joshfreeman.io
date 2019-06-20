@@ -57,7 +57,8 @@
     ],
     "no-debugger": [
       "warn"
-    ]
+    ],
+    "react/jsx-one-expression-per-line": 0
   },
   "overrides": [
     {
