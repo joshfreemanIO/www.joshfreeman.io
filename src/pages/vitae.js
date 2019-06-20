@@ -2,7 +2,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import Layout from '@components/Layout'
 import OpenGraph from '@components/OpenGraph'
 import joshLOGO from './logo.png'
 
@@ -128,7 +127,7 @@ const InsertAt = (collection, index, jsx) => {
 }
 
 const PageLayout = edges => (
-  <Layout>
+  <>
     <OpenGraph title="Software Vitae" ogImage={{ publicURL: joshLOGO }} ogImageAlt="The logo for joshfreeman.io" />
 
     <h1>Software Vitae</h1>
@@ -143,7 +142,7 @@ const PageLayout = edges => (
       return (<Work {...node.frontmatter} key={node.frontmatter.name} />)
     }), 1, <Disclaimer />)}
 
-  </Layout>
+  </>
 )
 
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import Layout from '@components/Layout'
 import PageHeader from '@components/PageHeader'
 import ContactForm from './ContactForm'
 import MusicalLinkAway from './MusicalLinkAway'
@@ -21,7 +20,7 @@ const SocialGroup = styled.div`
 `
 
 const Page = () => (
-  <Layout>
+  <>
     <Helmet>
       <title>Contact Josh Freeman</title>
     </Helmet>
@@ -37,7 +36,7 @@ const Page = () => (
       <MusicalLinkAway className="social-icon github" href="https://github.com/joshfreemanIO">Github</MusicalLinkAway>
     </SocialGroup>
 
-  </Layout>
+  </>
 )
 
 export default Page

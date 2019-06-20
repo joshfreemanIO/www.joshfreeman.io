@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import Layout from '@components/Layout'
 import OpenGraph from '@components/OpenGraph'
 
 const Links = styled.div`
@@ -65,7 +64,7 @@ const Template = ({ data, pageContext }) => {
   const { sectionNumber, title } = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <>
       {/* <OpenGraph {...frontmatter} /> */}
       <PaperPage
         paperdata={pageContext.paperdata}
@@ -75,7 +74,7 @@ const Template = ({ data, pageContext }) => {
         next={pageContext.next}
         content={html}
       />
-    </Layout>
+    </>
   )
 }
 

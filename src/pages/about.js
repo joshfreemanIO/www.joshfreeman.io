@@ -1,10 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '@components/Layout'
 import PageHeader from '@components/PageHeader'
 
 const Page = () => (
-  <Layout>
+  <>
     <Helmet>
       <title>About Josh Freeman</title>
     </Helmet>
@@ -24,7 +23,7 @@ const Page = () => (
       <a href="https://github.com/joshfreemanIO/www.joshfreeman.io">source code</a>
       &nbsp;to see how this how this is built and deployed.
     </p>
-  </Layout>
+  </>
 )
 
 export default Page
