@@ -8,6 +8,9 @@ const stylsheetLoaded = () => {
     stylesheets.push(document.styleSheets[i].href || '')
   }
 
+  console.log('document.styleSheets', document.styleSheets)
+  console.log('styleSheets', stylesheets)
+
   return stylesheets
     .filter(href => href.match('fonts.googleapis.com/css'))
     .length > 0
@@ -17,7 +20,7 @@ const activateWhenReady = model => {
   if (stylsheetLoaded()) {
     model.activate()
   } else {
-    setTimeout(() => activateWhenReady(model), 25)
+    setTimeout(() => activateWhenReady(model), 100)
   }
 }
 
@@ -30,6 +33,7 @@ const UIStore = types
       activateWhenReady(self)
     },
     activate() {
+      console.log('Content Status: activated')
       self.contentLoaded = true
     }
   }))
