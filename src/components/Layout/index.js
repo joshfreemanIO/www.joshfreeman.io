@@ -54,7 +54,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <>
         <Head data={data} />
         <Provider store={store}>
           <ThemeProvider theme={theme}>
@@ -69,7 +69,7 @@ const Layout = ({ children }) => (
             </MainWrapper>
           </ThemeProvider>
         </Provider>
-      </div>
+      </>
     )}
   />
 )
