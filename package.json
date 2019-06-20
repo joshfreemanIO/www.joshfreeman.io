@@ -5,6 +5,7 @@
   "author": "Josh Freeman <him@joshfreeman.io>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.1",
+    "browser-monads": "^1.0.0",
     "compare-versions": "^3.4.0",
     "gatsby": "^2.9.7",
     "gatsby-image": "^2.1.4",

@@ -1,4 +1,5 @@
 import { types } from 'mobx-state-tree'
+import { document } from 'browser-monads'
 
 const stylsheetLoaded = () => {
   const stylesheets = []
