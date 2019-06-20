@@ -87,6 +87,14 @@
       "rules": {
         "max-len": "off"
       }
+    },
+    {
+      "files": [
+        "src/papers/tools/*.js"
+      ],
+      "rules": {
+        "no-param-reassign": "off"
+      }
     }
   ]
 }
