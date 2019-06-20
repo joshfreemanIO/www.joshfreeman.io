@@ -4,9 +4,7 @@ import Layout from '../components/Layout'
 import Article from '../components/Article'
 import OpenGraph from '../components/OpenGraph'
 
-// const Template = ({ data }) => {
-const Template = data => {
-  console.log(data)
+const Template = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
 
   return (
@@ -22,7 +20,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "YYYY-MM-DD")
         path
         title
         description
