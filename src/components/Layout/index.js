@@ -5,22 +5,12 @@ import { Provider } from 'mobx-react'
 import styled, { ThemeProvider } from 'styled-components'
 import Navigation from '@components/Navigation'
 import NavigationButton from '@components/Navigation/Button'
+import MainWrapper from './MainWrapper'
 import Head from './Head'
 import store from '../../stores'
 import theme from '../../theme'
 import Style from './styles/css'
 
-const MainWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  height: 100%;
-  position: relative;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-`
 
 const ContentWrapper = styled.div`
   display: flex;
