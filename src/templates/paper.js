@@ -65,7 +65,7 @@ const Template = ({ data, pageContext }) => {
 
   return (
     <>
-      {/* <OpenGraph {...frontmatter} /> */}
+      <OpenGraph {...data.markdownRemark.frontmatter} />
       <PaperPage
         paperdata={pageContext.paperdata}
         sectionNumber={sectionNumber}
