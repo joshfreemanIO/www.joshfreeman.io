@@ -24,6 +24,7 @@
     "gatsby-transformer-yaml": "^2.1.12",
     "metaphone": "^1.0.5",
     "mobx": "^5.10.1",
+    "mobx-devtools-mst": "^0.9.21",
     "mobx-react": "^5.4.4",
     "mobx-state-tree": "^3.14.0",
     "node-sass": "^4.12.0",

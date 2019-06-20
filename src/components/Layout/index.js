@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { Provider } from 'mobx-react'
 import styled, { ThemeProvider } from 'styled-components'
 import Navigation from '@components/Navigation'
 import NavigationButton from '@components/Navigation/Button'
 import MainWrapper from './MainWrapper'
 import Head from './Head'
-import store from '../../stores'
 import theme from '../../theme'
 import Style from './styles/css'
+import AppLoaded from '../AppLoaded'
 
 
 const ContentWrapper = styled.div`
@@ -46,19 +45,18 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Head data={data} />
-        <Provider store={store}>
-          <ThemeProvider theme={theme}>
-            <MainWrapper>
-              <Style />
-              <Navigation />
-              <NavigationButton />
+        <ThemeProvider theme={theme}>
+          <MainWrapper>
+            <Style />
+            <Navigation />
+            <NavigationButton />
 
-              <ContentWrapper>
-                {children}
-              </ContentWrapper>
-            </MainWrapper>
-          </ThemeProvider>
-        </Provider>
+            <ContentWrapper>
+              {children}
+            </ContentWrapper>
+          </MainWrapper>
+        </ThemeProvider>
+        <AppLoaded />
       </>
     )}
   />

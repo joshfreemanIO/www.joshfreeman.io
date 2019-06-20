@@ -1,3 +1,5 @@
 import RootStore from './RootStore'
 
-export default RootStore.create({})
+const createStore = () => RootStore.create({})
+
+export default createStore
