@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import OpenGraph from '@components/OpenGraph'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 const Links = styled.div`
   display: flex;
@@ -9,12 +9,10 @@ const Links = styled.div`
   justify-content: space-between;
 `
 
-const NavigationLink = ({ node } = { frontmatter: {} }) => {
-  if (node === undefined || node.frontmatter === undefined) {
+const NavigationLink = ({ path, title }) => {
+  if (path === undefined || title === undefined) {
     return <Link to="/" />
   }
-
-  const { path, title } = node.frontmatter
 
   return <Link to={path}>{title}</Link>
 }
@@ -23,12 +21,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  flex-grow: 1;
-`
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
 `
 
@@ -50,44 +42,52 @@ const PaperPage = ({ content, previous, next, title, sectionNumber, paperdata })
     <PaperTitle>{paperdata.title}</PaperTitle>
     <PageTitle>{sectionNumber} - {title}</PageTitle>
 
-    <Content dangerouslySetInnerHTML={{ __html: content }} />
+    <MDXRenderer>
+      {content}
+    </MDXRenderer>
 
     <Links>
-      <NavigationLink node={previous} />
-      <NavigationLink node={next} />
+      <NavigationLink {...previous} />
+      <NavigationLink {...next} />
     </Links>
   </Container>
 )
 
 const Template = ({ data, pageContext }) => {
-  const { html } = data.markdownRemark
-  const { sectionNumber, title } = data.markdownRemark.frontmatter
+  const { body } = data.mdx.code
+  const { title } = data.mdx.frontmatter
+  const { sectionNumber } = data.mdx.fields
+  const { next, previous } = pageContext
 
   return (
     <>
-      <OpenGraph {...data.markdownRemark.frontmatter} />
+      {/* {/* <OpenGraph {...data.markdownRemark.frontmatter} /> */}
       <PaperPage
         paperdata={pageContext.paperdata}
         sectionNumber={sectionNumber}
         title={title}
-        previous={pageContext.previous}
-        next={pageContext.next}
-        content={html}
+        previous={previous}
+        next={next}
+        content={body}
       />
     </>
   )
 }
 
-export const query = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+export const pageQuery = graphql`
+  query BlogPostQuery($path: String) {
+    mdx(fields: { path: { eq: $path } }) {
       id
       frontmatter {
         title
+      }
+      fields {
+        paper,
+        paperdata,
         sectionNumber
-        path
-        paper
+      }
+      code {
+        body
       }
     }
   }
