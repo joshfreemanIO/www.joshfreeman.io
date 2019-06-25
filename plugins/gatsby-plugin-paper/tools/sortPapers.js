@@ -5,11 +5,12 @@ const sortPapers = papers => {
     .map(({ node }) => node)
     .sort((lhs, rhs) => {
       try {
-        return compareVersions(lhs.frontmatter.sectionNumber, rhs.frontmatter.sectionNumber)
+        return compareVersions(lhs.fields.sectionNumber, rhs.fields.sectionNumber)
       } catch {
         return 0
       }
     })
+    .map(({ fields }) => fields)
 }
 
 exports.default = sortPapers
