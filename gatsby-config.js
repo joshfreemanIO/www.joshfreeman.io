@@ -32,6 +32,7 @@ module.exports = {
         extensions: ['.mdx', '.md']
       }
     },
+    'gatsby-plugin-paper',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
