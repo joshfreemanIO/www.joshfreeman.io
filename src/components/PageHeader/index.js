@@ -8,7 +8,6 @@ const PageHeader = styled.h1`
   display: inline-block;
   justify-self: flex-end;
   position: relative;
-
 `
 
 export default PageHeader

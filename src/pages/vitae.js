@@ -146,17 +146,13 @@ const PageLayout = edges => (
 )
 
 
-const Page = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => PageLayout(edges)
+const Page = ({ data: { allMdx: { edges } } }) => PageLayout(edges)
 
 export default Page
 
 export const pageQuery = graphql`
   query {
-        allMarkdownRemark(
+        allMdx(
           filter: {
         fileAbsolutePath: {
         regex: "/src/data/.*.md$/"

@@ -36,8 +36,9 @@ const Component = ({ title, date, html }) => {
         <time itemProp="datePublished" dateTime={date}>{date}</time>
       </ArticleHeader>
 
-      {/* eslint-disable react/no-danger */}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div>
+        {html}
+      </div>
     </Article>
   )
 }

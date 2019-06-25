@@ -1,6 +1,4 @@
 const path = require('path')
-const transformNode = require('./src/papers/tools/transformNode').default
-const createPagesForPapers = require('./src/papers/tools/createPagesForPapers').default
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
@@ -9,7 +7,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const blog = await graphql(`
     {
-      allMarkdownRemark(
+      allMdx(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
           fileAbsolutePath: {
@@ -20,7 +18,6 @@ exports.createPages = async ({ actions, graphql }) => {
         edges {
           node {
             id
-            html
             frontmatter {
               title
               description
@@ -42,7 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
     throw blog.errors
   }
 
-  blog.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  blog.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
@@ -52,21 +49,13 @@ exports.createPages = async ({ actions, graphql }) => {
       frontmatter: node.frontmatter
     })
   })
-
-  await createPagesForPapers(graphql, createPage)
-}
-
-exports.onCreateNode = ({ node, getNode }) => {
-  if (node.internal.type === 'MarkdownRemark' && getNode(node.parent).sourceInstanceName === 'papers') {
-    node = transformNode(node, __dirname)
-  }
 }
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '@components': path.resolve(__dirname, 'src/components')
+        '@components': path.resolve(__dirname, 'src/components'),
       }
     }
   })

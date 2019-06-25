@@ -1,31 +1,37 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Article from '@components/Article'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 const PageLayout = edges => (
   <>
     {edges.map(({ node }) => {
-      const { frontmatter, html } = node
-      const { title, date } = frontmatter
+      const { body } = node.code
+      const { title, date } = node.frontmatter
 
       return (
-        <Article key={node.id} title={title} date={date} html={html} />
+        <Article
+          key={node.id}
+          title={title}
+          date={date}
+          html={(
+            <MDXRenderer>
+              {body}
+            </MDXRenderer>
+        )}
+        />
       )
     })}
   </>
 )
 
-const Page = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => PageLayout(edges)
+const Page = ({ data: { allMdx: { edges } } }) => PageLayout(edges)
 
 export default Page
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         fileAbsolutePath: {
           regex: "/src/posts/.*.md$/"
@@ -34,8 +40,10 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          html
           excerpt(pruneLength: 250)
+          code {
+            body
+          }
           frontmatter {
             date
             path
