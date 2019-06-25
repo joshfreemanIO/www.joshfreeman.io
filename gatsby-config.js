@@ -26,7 +26,12 @@ module.exports = {
         path: `${__dirname}/src/papers/`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-mdx',
+      options: {
+        extensions: ['.mdx', '.md']
+      }
+    },
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
