@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { MDXProvider } from '@mdx-js/react'
+import Verse from '@components/Papers'
 
 const Links = styled.div`
   display: flex;
@@ -42,9 +44,11 @@ const PaperPage = ({ content, previous, next, title, sectionNumber, paperdata })
     <PaperTitle>{paperdata.title}</PaperTitle>
     <PageTitle>{sectionNumber} - {title}</PageTitle>
 
-    <MDXRenderer>
-      {content}
-    </MDXRenderer>
+    <MDXProvider components={{ Verse }}>
+      <MDXRenderer>
+        {content}
+      </MDXRenderer>
+    </MDXProvider>
 
     <Links>
       <NavigationLink {...previous} />
