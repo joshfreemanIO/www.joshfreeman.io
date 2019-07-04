@@ -16,11 +16,15 @@ const fetchPaperData = async graphql => {
   }
   `)
 
+  if (paperInfo.errors) {
+    throw paperInfo.errors
+  }
+
   return paperInfo.data.allMdx.edges.map(({ node }) => ({
     title: node.frontmatter.title,
     paper: node.frontmatter.paper,
     path: `papers/${node.frontmatter.paper}`,
-    template: node.frontmatter.template
+    template: node.frontmatter.template,
   }))
 }
 
