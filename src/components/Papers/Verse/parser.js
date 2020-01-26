@@ -41,9 +41,10 @@ const parseReferences = references => {
 
       return parseSingleReference(reference)
     })
-    .reduce((result, reference, index, references) => {
+    .reduce((result, reference, index, referencesList) => {
       if (reference.chapter === undefined && reference.end === undefined) {
-        reference.chapter = references[index - 1].chapter || references[index - 1].end.chapter
+        /* eslint-disable-next-line no-param-reassign */
+        reference.chapter = referencesList[index - 1].chapter || referencesList[index - 1].end.chapter
       }
 
       return result.concat([reference])
