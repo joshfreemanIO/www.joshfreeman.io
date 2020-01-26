@@ -20,19 +20,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'papers',
-        path: `${__dirname}/src/papers/`,
-      },
-    },
-    {
       resolve: 'gatsby-mdx',
       options: {
         extensions: ['.mdx', '.md']
       }
     },
-    'gatsby-plugin-paper',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
