@@ -107,10 +107,6 @@ const Navigation = ({ store }) => {
 
       <NavigationLinks>
         <NavGroup className="nav-group">
-          <NavLink to="/papers" onClick={store.UIStore.Navigation.dismiss}>Papers</NavLink>
-        </NavGroup>
-
-        <NavGroup className="nav-group">
           <NavLink to="/about" onClick={store.UIStore.Navigation.dismiss}>About</NavLink>
         </NavGroup>
 
