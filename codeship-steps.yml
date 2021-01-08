@@ -9,9 +9,9 @@
       service: gatsby
       command: npm run lint
 
-    - name: Run Jest
-      service: gatsby
-      command: npm test
+    # - name: Run Jest
+    #   service: gatsby
+    #   command: npm test
 
     - name: Build Site
       service: gatsby
